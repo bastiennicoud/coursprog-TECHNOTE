@@ -1,10 +1,3 @@
-<?php
-
-  // Fichier d'entrée de l'application
-  // contient le routeur vers mes différentes pages
-
-?>
-
 <!doctype html>
 <html lang="fr">
 <html>
@@ -21,7 +14,7 @@
 
     <!-- Titre et favicon -->
     <title>TECHNOTE</title>
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" type="image/png" href="img/icon.png">
 
     <!-- Styles CSS (normalize + grille bootstrap) -->
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
@@ -31,10 +24,8 @@
   </head>
   <body>
 
-
+    <h1>hello !</h1>
 
     <!-- Diférents scripts -->
-    <script src="#"></script>
-
   </body>
 </html>

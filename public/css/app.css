@@ -1,1 +1,35 @@
 @charset "UTF-8";
+
+/* SUMMARY
+--------------------------
+*  fonts
+*  global rules
+*
+*
+*
+*/
+
+
+
+/* ---- Fonts ---- */
+@font-face{
+  font-family: "Ubuntu-Regular";
+  src: url(../fonts/Ubuntu-Regular.ttf);
+}
+
+@font-face{
+  font-family: "Ubuntu-Bold";
+  src: url(../fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face{
+  font-family: "Ubuntu-Light";
+  src: url(../fonts/Ubuntu-Light.ttf);
+}
+
+
+
+/* ---- Global Rules ---- */
+*{
+  font-family: "Ubuntu-Regular", "Helvetica", "Arial";
+}
