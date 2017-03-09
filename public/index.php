@@ -26,6 +26,14 @@
 
     <h1>hello !</h1>
 
+    <div class="login-box">
+      <div class="input-box">
+        <label for="note" class="input-label">Travail pratique TPI</label>
+        <input type="number" id="note" name="tpi" class="input-field">
+      </div>
+    </div>
+
     <!-- Diférents scripts -->
+
   </body>
 </html>

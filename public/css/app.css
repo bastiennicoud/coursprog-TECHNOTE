@@ -4,7 +4,8 @@
 --------------------------
 *  fonts
 *  global rules
-*
+*  inputs layout
+*  Login Box
 *
 *
 */
@@ -33,3 +34,12 @@
 *{
   font-family: "Ubuntu-Regular", "Helvetica", "Arial";
 }
+
+
+
+/* ---- inputs layout ---- */
+
+
+
+
+/* ---- Login Box ---- */
