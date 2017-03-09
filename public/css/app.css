@@ -6,7 +6,7 @@
 *  global rules
 *  inputs layout
 *  Login Box
-*
+*  Home
 *
 */
 
@@ -35,6 +35,16 @@
   font-family: "Ubuntu-Regular", "Helvetica", "Arial";
 }
 
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  height: 100%;
+  width: 100%;
+}
+
 
 
 /* ---- inputs layout ---- */
@@ -43,3 +53,12 @@
 
 
 /* ---- Login Box ---- */
+
+
+
+/* ---- Home ---- */
+#home-background{
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/live.jpg);
+}
