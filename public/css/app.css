@@ -35,6 +35,14 @@
   font-family: "Ubuntu-Regular", "Helvetica", "Arial";
 }
 
+h1, h2, h3, h4, h5, h6{
+  font-family: "Ubuntu-Bold", "Helvetica", "Arial";
+}
+
+button{
+  font-family: "Ubuntu-Regular", "Helvetica", "Arial";
+}
+
 html{
   height: 100%;
   width: 100%;
@@ -45,6 +53,10 @@ body{
   width: 100%;
 }
 
+.max-width{
+  height: 100%;
+}
+
 
 
 /* ---- inputs layout ---- */
@@ -53,6 +65,13 @@ body{
 
 
 /* ---- Login Box ---- */
+#login-box{
+  width: 40%;
+  background-color: rgba(236, 240, 241,0.6);
+  border-radius: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
 
 
@@ -61,4 +80,6 @@ body{
   height: 100%;
   width: 100%;
   background-image: url(../img/live.jpg);
+  background-size: cover;
+  background-position: center;
 }

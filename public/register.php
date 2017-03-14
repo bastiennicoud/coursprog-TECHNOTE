@@ -31,7 +31,7 @@
 
           <img class="medium-12 columns" src="img/logo.svg" alt="logo">
 
-          <h3 class="medium-12 columns">Connectez-vous !</h4>
+          <h3 class="medium-12 columns">Inscription !</h4>
 
           <div class="medium-12 columns">
             <input type="text" placeholder="Nom d'utilisateur">
@@ -40,13 +40,15 @@
             <input type="password" placeholder="Mot de passe">
           </div>
           <div class="medium-12 columns">
-            <input id="checkbox12" type="checkbox"><label for="checkbox12">Rester connecté</label>
+            <input type="password" placeholder="Confirmez votre mot de passe">
+          </div>
+          <div class="medium-12 columns">
+            <input type="text" placeholder="E-mail">
           </div>
 
           <div class="small-12 columns">
             <div class="row align-spaced">
               <button type="button" class="button column small-4 large-3">S'inscrire</button>
-              <button type="button" class="button column small-4 large-3">Connexion</button>
             </div>
           </div>
         </div>
