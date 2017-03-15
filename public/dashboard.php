@@ -36,6 +36,9 @@
         <ul class="navbar-nav mr-auto">
 
           <li class="nav-item">
+            <a class="nav-link disabled" href="#">ADMIN</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#">Mes fiches techniques <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
@@ -58,6 +61,7 @@
 
     <!-- Diférents scripts -->
     <script src="js/jquery.js"></script>
+    <script src="js/tether/js/tether.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="js/app.js"></script>
   </body>
