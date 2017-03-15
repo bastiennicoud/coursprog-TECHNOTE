@@ -70,9 +70,47 @@
       </div>
 
       <div class="row">
-        <div class="col-12">
-          <p>Voici la liste de toutes vos fiches techniques!</p>
+
+        <div class="col-sm-6">
+          <h3>Informations générales</h3>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Nom de la fiche tech">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-info" data-toggle="name" title="Nom" data-content="Ce nom sérvira uniquement pour l'organisation des fiches techniques, il n'aparaitra pas sur la fiche technique.">i</button>
+            </span>
+          </div>
+          <br>
+          <div class="form-group">
+            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Description"></textarea>
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Pin">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-info" data-toggle="pin" title="Pin" data-content="Entrez un code pin a 4 chiffres, les personnes voulant visualiser votre fiche technique devront rentrer ce code.">i</button>
+            </span>
+          </div>
         </div>
+
+        <div class="col-sm-6">
+          <h3>Informations du groupe</h3>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Nom du groupe">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-info" data-toggle="bandname" data-placement="left" title="Nom du groupe" data-content="Précisez le nom du groupe concérné par la fiche technique.">i</button>
+            </span>
+          </div>
+          <br>
+          <div class="form-group">
+            <input type="date" class="form-control" placeholder="Nom du groupe">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" class="form-control-file btn" id="exampleInputFile" aria-describedby="fileHelp">
+            <small id="fileHelp" class="form-text text-muted">Choisisez une image pour illustrer votre fiche technique.</small>
+          </div>
+        </div>
+
       </div>
 
     </div>
