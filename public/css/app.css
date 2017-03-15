@@ -49,6 +49,10 @@ body{
   height: 100%;
 }
 
+.top-40{
+  margin-top: 40px;
+}
+
 
 
 /* ---- inputs layout ---- */
