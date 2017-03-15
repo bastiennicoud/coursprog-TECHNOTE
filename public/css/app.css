@@ -32,7 +32,7 @@
 
 /* ---- Global Rules ---- */
 *{
-  font-family: "Ubuntu-Regular", "Helvetica", "Arial";
+  font-family: "Ubuntu-Regular", "Helvetica", "Arial" !important;
 }
 
 html{
