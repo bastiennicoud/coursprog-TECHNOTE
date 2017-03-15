@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" href="img/icon.png">
 
     <!-- Styles CSS (normalize + grille bootstrap) -->
-    <link rel="stylesheet" href="foundation/css/foundation.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/app.css">
 
   </head>
@@ -25,30 +25,43 @@
 
     <div id="home-background">
 
-      <div class="row align-center max-width">
+      <div class="container max-height">
 
-        <div id="login-box" class="column small-12 medium-8 large-6 align-self-middle">
+        <div class="row justify-content-center max-height">
 
-          <img class="medium-12 columns" src="img/logo.svg" alt="logo">
+          <div id="login-box" class="col-12 col-sm-8 col-md-6 col-xl-4 align-self-center">
 
-          <h3 class="medium-12 columns">Connectez-vous !</h4>
+            <img src="img/logo.svg" alt="logo">
 
-          <div class="medium-12 columns">
-            <input type="text" placeholder="Nom d'utilisateur">
-          </div>
-          <div class="medium-12 columns">
-            <input type="password" placeholder="Mot de passe">
-          </div>
-          <div class="medium-12 columns">
-            <input id="checkbox12" type="checkbox"><label for="checkbox12">Rester connecté</label>
-          </div>
-
-          <div class="small-12 columns">
-            <div class="row align-spaced">
-              <button type="button" class="button column small-4 large-3">S'inscrire</button>
-              <button type="button" class="button column small-4 large-3">Connexion</button>
+            <div class="row">
+              <div class="col-12">
+                <h3 class="text-center">Se connecter</h3>
+              </div>
             </div>
+
+            <div class="row">
+              <div class="input-group input-group-lg">
+                <input type="text" name="username" class="form-control" placeholder="Nom d'utilisateur">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-group input-group-lg">
+                <input type="password" name="password" class="form-control" placeholder="Mot de passe">
+                <span class="input-group-btn">
+                  <button class="btn btn-primary" type="button">Go!</button>
+                </span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+               <p class="text-center">Vous n'avez pas de compte, <a href="register.php">inscrivez-vous</a></p>
+              </div>
+            </div>
+
           </div>
+
         </div>
 
       </div>
@@ -56,9 +69,6 @@
     </div>
 
     <!-- Diférents scripts -->
-    <script src="foundation/js/jquery.js"></script>
-    <script src="foundation/js/what-input.js"></script>
-    <script src="foundation/js/foundation.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
