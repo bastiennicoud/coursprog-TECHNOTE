@@ -105,7 +105,7 @@
           </div>
           <br>
           <div class="form-group">
-            <label for="exampleInputFile">File input</label>
+            <label for="exampleInputFile">Image du groupe</label>
             <input type="file" class="form-control-file btn" id="exampleInputFile" aria-describedby="fileHelp">
             <small id="fileHelp" class="form-text text-muted">Choisisez une image pour illustrer votre fiche technique.</small>
           </div>
