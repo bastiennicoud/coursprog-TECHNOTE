@@ -71,7 +71,7 @@
 
       <div class="row">
 
-        <div class="col-sm-6">
+        <div class="col-sm-6 top-40">
           <h3>Informations générales</h3>
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Nom de la fiche tech">
@@ -91,7 +91,7 @@
           </div>
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-sm-6 top-40">
           <h3>Informations du groupe</h3>
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Nom du groupe">
@@ -101,14 +101,26 @@
           </div>
           <br>
           <div class="form-group">
-            <input type="date" class="form-control" placeholder="Nom du groupe">
+            <input type="date" class="form-control">
+          </div>
+          <br>
+          <div class="form-group">
+            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Descriptif du style du groupe."></textarea>
           </div>
           <br>
           <div class="form-group">
             <label for="exampleInputFile">Image du groupe</label>
-            <input type="file" class="form-control-file btn" id="exampleInputFile" aria-describedby="fileHelp">
+            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
             <small id="fileHelp" class="form-text text-muted">Choisisez une image pour illustrer votre fiche technique.</small>
           </div>
+        </div>
+
+      </div>
+
+      <div class="row top-40">
+
+        <div class="col-12 text-right">
+          <button type="button" name="button" class="btn btn-primary btn-lg">Créer la fiche</button>
         </div>
 
       </div>
