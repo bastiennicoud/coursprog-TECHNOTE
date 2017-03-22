@@ -13,9 +13,12 @@
 
 
 /* ---- Fonts ---- */
-@font-face{
-  font-family: "Ubuntu-Regular";
-  src: url(../fonts/Ubuntu-Regular.ttf);
+@font-face {
+  font-family: 'Ubuntu-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu-Regular'),
+       url('../fonts/ubuntu-regular.woff') format('woff');
 }
 
 @font-face{
@@ -47,6 +50,10 @@ body{
 
 .max-height{
   height: 100%;
+}
+
+.top-10{
+  margin-top: 10px;
 }
 
 .top-40{

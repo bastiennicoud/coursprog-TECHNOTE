@@ -60,12 +60,34 @@
       </div>
 
       <div class="row">
-        <button type="button" name="button" class="btn btn-info">Editer les informations</button>
-        <button type="button" name="button" class="btn btn-info">Editer les contatcs</button>
-        <button type="button" name="button" class="btn btn-info">Editer les commentaires</button>
-        <button type="button" name="button" class="btn btn-info">Ajouter un plan de scene</button>
-        <button type="button" name="button" class="btn btn-info">Editer le patch</button>
-        <button type="button" name="button" class="btn btn-info">Editer les musiciens</button>
+        <div class="col-12">
+          <h3>Phill Collins</h3>
+        </div>
+      </div>
+
+      <div class="row top-10">
+        <div class="col-3">
+          <button type="button" name="button" class="btn btn-info">Editer les informations</button>
+        </div>
+        <div class="col-3">
+          <button type="button" name="button" class="btn btn-info">Editer les contatcs</button>
+        </div>
+      </div>
+      <div class="row top-10">
+        <div class="col-3">
+          <button type="button" name="button" class="btn btn-info">Editer les commentaires</button>
+        </div>
+        <div class="col-3">
+          <button type="button" name="button" class="btn btn-info">Ajouter un plan de scene</button>
+        </div>
+      </div>
+      <div class="row top-10">
+        <div class="col-3">
+          <button type="button" name="button" class="btn btn-info">Editer le patch</button>
+        </div>
+        <div class="col-3">
+          <button type="button" name="button" class="btn btn-info">Editer les musiciens</button>
+        </div>
       </div>
 
     </div>
