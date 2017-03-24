@@ -52,6 +52,10 @@ body{
   height: 100%;
 }
 
+.max-width{
+  width: 100%;
+}
+
 .top-10{
   margin-top: 10px;
 }
@@ -83,4 +87,20 @@ body{
   background-image: url(../img/live.jpg);
   background-size: cover;
   background-position: center;
+}
+
+#tech-background{
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/live.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.fff{
+  color: #FFF;
+}
+
+.centred{
+  padding-top: 20%;
 }
