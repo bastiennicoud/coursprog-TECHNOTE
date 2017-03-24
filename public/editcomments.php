@@ -65,62 +65,74 @@
 
       <div class="row top-40">
         <div class="col-12">
-          <h1>Nouvelle fiche technique</h1>
+          <h1>Editer les informations complémentaires <small>Phill Collins</small></h1>
+        </div>
+      </div>
+
+      <div class="row top-10">
+        <div class="col-12">
+          <h3>Vos commentaires</h3>
+        </div>
+      </div>
+
+      <div class="row top-10">
+        <div class="col-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Titre</th>
+                <th>Chapeau</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Arrivée des artistes</td>
+                <td>Les artistes arrivent en tour bus 1h avant répetition.</td>
+                <th><button type="button" name="edit" class="btn btn-warning btn-sm">Editer</button></th>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
       <div class="row">
+        <div class="col-12">
+          <h3>Nouveau commentaire</h3>
+        </div>
+      </div>
 
-        <div class="col-sm-6 top-40">
-          <h3>Informations générales</h3>
+      <div class="row top-40">
+
+        <div class="col-sm-6">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Nom de la fiche tech">
-            <span class="input-group-btn">
-              <button type="button" class="btn btn-info" data-toggle="name" title="Nom" data-content="Ce nom sérvira uniquement pour l'organisation des fiches techniques, il n'aparaitra pas sur la fiche technique.">i</button>
-            </span>
-          </div>
-          <br>
-          <div class="form-group">
-            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Description"></textarea>
-          </div>
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Pin">
-            <span class="input-group-btn">
-              <button type="button" class="btn btn-info" data-toggle="pin" title="Pin" data-content="Entrez un code pin a 4 chiffres, les personnes voulant visualiser votre fiche technique devront rentrer ce code.">i</button>
-            </span>
+            <input type="text" class="form-control" name="title" placeholder="Titre">
           </div>
         </div>
 
-        <div class="col-sm-6 top-40">
-          <h3>Informations du groupe</h3>
+        <div class="col-sm-6">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Nom du groupe">
-            <span class="input-group-btn">
-              <button type="button" class="btn btn-info" data-toggle="bandname" data-placement="left" title="Nom du groupe" data-content="Précisez le nom du groupe concérné par la fiche technique.">i</button>
-            </span>
-          </div>
-          <br>
-          <div class="form-group">
-            <input type="date" class="form-control">
-          </div>
-          <br>
-          <div class="form-group">
-            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Descriptif du style du groupe."></textarea>
-          </div>
-          <br>
-          <div class="form-group">
-            <label for="exampleInputFile">Image du groupe</label>
-            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-            <small id="fileHelp" class="form-text text-muted">Choisisez une image pour illustrer votre fiche technique.</small>
+            <input type="text" class="form-control" name="head" placeholder="Chapeau">
           </div>
         </div>
 
+      </div>
+
+      <div class="row top-10">
+        <div class="col-12">
+          <div class="form-group">
+            <textarea class="form-control" name="comment" rows="10" placeholder="Commentaire"></textarea>
+          </div>
+        </div>
       </div>
 
       <div class="row top-40">
 
         <div class="col-12 text-right">
-          <button type="button" name="button" class="btn btn-primary btn-lg">Créer la fiche</button>
+          <button type="button" name="clear" class="btn btn-warning btn-lg">Vider</button>
+          <button type="button" name="send" class="btn btn-primary btn-lg">Ajouter ce contact</button>
         </div>
 
       </div>

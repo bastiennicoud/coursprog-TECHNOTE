@@ -65,7 +65,7 @@
 
       <div class="row top-40">
         <div class="col-12">
-          <h1>Nouvelle fiche technique</h1>
+          <h1>Editer les informations <small>Phill Collins</small></h1>
         </div>
       </div>
 
@@ -120,7 +120,8 @@
       <div class="row top-40">
 
         <div class="col-12 text-right">
-          <button type="button" name="button" class="btn btn-primary btn-lg">Créer la fiche</button>
+          <button type="button" name="button" class="btn btn-warning btn-lg">Annuler</button>
+          <button type="button" name="button" class="btn btn-primary btn-lg">Modifier la fiche</button>
         </div>
 
       </div>
