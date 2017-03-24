@@ -61,7 +61,7 @@
 
 
 
-    <div class="container">
+    <div class="container-fluid">
 
       <div class="row top-40">
         <div class="col-12">
@@ -71,7 +71,7 @@
 
       <div class="row top-10">
         <div class="col-12">
-          <h3>Vos contacts</h3>
+          <h3>Patchlist</h3>
         </div>
       </div>
 
@@ -80,67 +80,87 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th>#</th>
-                <th>Nom</th>
-                <th>Fonction</th>
-                <th>E-mail</th>
-                <th>Téléphone</th>
-                <th>WEB</th>
+                <th>channel</th>
+                <th>Instrument</th>
+                <th>Microphone</th>
+                <th>FX / insert</th>
+                <th>Monnitor mix</th>
+                <th>Controls</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Jean edouard</td>
-                <td>Ingénieur facade</td>
-                <td>jean@events.com</td>
-                <td>0793234556</td>
-                <td><a href="#">LINK</a></td>
+                <th>1</th>
+                <td>Kick in</td>
+                <td>Beta 91a</td>
+                <td>Comp/gate</td>
+                <td>1 drum</td>
+                <td>
+                  <button type="button" name="edit" class="btn btn-info btn-sm">Editer</button>
+                  <button type="button" name="edit" class="btn btn-danger btn-sm">Suppr</button>
+                </td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Kick out</td>
+                <td>AUDIX D6</td>
+                <td>Comp/gate</td>
+                <td>1 drum</td>
+                <td>
+                  <button type="button" name="edit" class="btn btn-info btn-sm">Editer</button>
+                  <button type="button" name="edit" class="btn btn-danger btn-sm">Suppr</button>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row top-40">
         <div class="col-12">
-          <h3>Nouveau contact</h3>
+          <h3>Nouvelle piste</h3>
         </div>
       </div>
 
-      <div class="row top-40">
+      <div class="row top-10">
 
-        <div class="col-sm-6">
+        <div class="col-sm-3">
           <div class="input-group">
-            <input type="text" class="form-control" name="name" placeholder="Nom complet">
+            <input type="text" class="form-control" name="channel" placeholder="channel">
           </div>
-          <br>
+        </div>
+        <div class="col-sm-3">
           <div class="input-group">
-            <input type="text" class="form-control" name="email" placeholder="E-mail">
+            <input type="text" class="form-control" name="mic" placeholder="Microphone">
           </div>
-          <br>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="input-group">
+            <input type="text" class="form-control" name="instrument" placeholder="Instrument">
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="input-group">
+            <input type="text" class="form-control" name="fx" placeholder="FX / insert">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row top-10">
+        <div class="col-12">
           <div class="input-group">
             <input type="text" class="form-control" name="web" placeholder="Site web">
           </div>
         </div>
-
-        <div class="col-sm-6">
-          <div class="input-group">
-            <input type="text" class="form-control" name="function" placeholder="Fonction">
-          </div>
-          <br>
-          <div class="input-group">
-            <input type="text" class="form-control" name="phone" placeholder="Numéro de téléphone">
-          </div>
-        </div>
-
       </div>
 
-      <div class="row top-40">
+      <div class="row top-10">
 
         <div class="col-12 text-right">
           <button type="button" name="clear" class="btn btn-warning btn-lg">Vider</button>
-          <button type="button" name="send" class="btn btn-primary btn-lg">Ajouter ce contact</button>
+          <button type="button" name="send" class="btn btn-primary btn-lg">Ajouter cette piste</button>
         </div>
 
       </div>
