@@ -46,6 +46,16 @@
           </li>
         </ul>
 
+        <form class="form-inline my-2 my-lg-0">
+          <div class="input-group">
+            <input class="form-control" type="text" placeholder="Rechercher">
+            <span class="input-group-btn">
+              <button class="btn btn-primary" type="button">Go!</button>
+            </span>
+          </div>
+
+        </form>
+
       </div>
     </nav>
 
@@ -55,50 +65,76 @@
 
       <div class="row top-40">
         <div class="col-12">
-          <h1>Editer votre fiche technique</h1>
+          <h1>Editer les informations complémentaires <small>Phill Collins</small></h1>
+        </div>
+      </div>
+
+      <div class="row top-10">
+        <div class="col-12">
+          <h3>Vos commentaires</h3>
+        </div>
+      </div>
+
+      <div class="row top-10">
+        <div class="col-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Titre</th>
+                <th>Chapeau</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Arrivée des artistes</td>
+                <td>Les artistes arrivent en tour bus 1h avant répetition.</td>
+                <th><button type="button" name="edit" class="btn btn-warning btn-sm">Editer</button></th>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
       <div class="row">
         <div class="col-12">
-          <h3>Phill Collins</h3>
-        </div>
-      </div>
-
-      <div class="row top-10">
-        <div class="col-3">
-          <a href="editinfos.php" class="btn btn-info">Editer les informations</a>
-        </div>
-        <div class="col-3">
-          <a href="#" class="btn btn-info">Editer les contatcs</a>
-        </div>
-      </div>
-      <div class="row top-10">
-        <div class="col-3">
-          <a href="#" class="btn btn-info">Editer les commentaires</a>
-        </div>
-        <div class="col-3">
-          <a href="#" class="btn btn-info">Ajouter un plan de scene</a>
-        </div>
-      </div>
-      <div class="row top-10">
-        <div class="col-3">
-          <a href="#" class="btn btn-info">Editer le patch</a>
-        </div>
-        <div class="col-3">
-          <a href="#" class="btn btn-info">Editer les musiciens</a>
+          <h3>Nouveau commentaire</h3>
         </div>
       </div>
 
       <div class="row top-40">
-        <div class="col-12">
-          <h3>Ajout du plan de scene</h3>
-          <div class="form-group">
-            <label for="exampleInputFile">Votre image</label>
-            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-            <small id="fileHelp" class="form-text text-muted">Cette image renseigne sur la position des musiciens et du matériel sur scène</small>
+
+        <div class="col-sm-6">
+          <div class="input-group">
+            <input type="text" class="form-control" name="title" placeholder="Titre">
           </div>
         </div>
+
+        <div class="col-sm-6">
+          <div class="input-group">
+            <input type="text" class="form-control" name="head" placeholder="Chapeau">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row top-10">
+        <div class="col-12">
+          <div class="form-group">
+            <textarea class="form-control" name="comment" rows="10" placeholder="Commentaire"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="row top-40">
+
+        <div class="col-12 text-right">
+          <button type="button" name="clear" class="btn btn-warning btn-lg">Vider</button>
+          <button type="button" name="send" class="btn btn-primary btn-lg">Ajouter ce contact</button>
+        </div>
+
       </div>
 
     </div>
@@ -107,6 +143,6 @@
     <script src="js/jquery.js"></script>
     <script src="js/tether/js/tether.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/new.js"></script>
   </body>
 </html>
