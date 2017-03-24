@@ -65,13 +65,13 @@
 
       <div class="row top-40">
         <div class="col-12">
-          <h1>Editer le patch <small>Phill Collins</small></h1>
+          <h1>Editer les musiciens <small>Phill Collins</small></h1>
         </div>
       </div>
 
       <div class="row top-10">
         <div class="col-12">
-          <h3>Patchlist</h3>
+          <h3>Liste des musiciens</h3>
         </div>
       </div>
 
@@ -80,21 +80,17 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th>channel</th>
+                <th>#</th>
+                <th>Nom complet</th>
                 <th>Instrument</th>
-                <th>Microphone</th>
-                <th>FX / insert</th>
-                <th>Monnitor mix</th>
                 <th>Controls</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th>1</th>
-                <td>Kick in</td>
-                <td>Beta 91a</td>
-                <td>Comp/gate</td>
-                <td>1 drum</td>
+                <td>John Doe</td>
+                <td>Drums</td>
                 <td>
                   <button type="button" name="edit" class="btn btn-info btn-sm">Editer</button>
                   <button type="button" name="edit" class="btn btn-danger btn-sm">Suppr</button>
@@ -102,10 +98,8 @@
               </tr>
               <tr>
                 <th>2</th>
-                <td>Kick out</td>
-                <td>AUDIX D6</td>
-                <td>Comp/gate</td>
-                <td>1 drum</td>
+                <td>John Doe</td>
+                <td>Guitar</td>
                 <td>
                   <button type="button" name="edit" class="btn btn-info btn-sm">Editer</button>
                   <button type="button" name="edit" class="btn btn-danger btn-sm">Suppr</button>
@@ -124,43 +118,24 @@
 
       <div class="row top-10">
 
-        <div class="col-sm-3">
+        <div class="col-sm-6">
           <div class="input-group">
-            <input type="text" class="form-control" name="channel" placeholder="channel">
+            <input type="text" class="form-control" name="channel" placeholder="Nom complet">
           </div>
         </div>
-        <div class="col-sm-3">
-          <div class="input-group">
-            <input type="text" class="form-control" name="mic" placeholder="Microphone">
-          </div>
-        </div>
-
-        <div class="col-sm-3">
+        <div class="col-sm-6">
           <div class="input-group">
             <input type="text" class="form-control" name="instrument" placeholder="Instrument">
           </div>
         </div>
-        <div class="col-sm-3">
-          <div class="input-group">
-            <input type="text" class="form-control" name="fx" placeholder="FX / insert">
-          </div>
-        </div>
 
-      </div>
-
-      <div class="row top-10">
-        <div class="col-12">
-          <div class="input-group">
-            <input type="text" class="form-control" name="web" placeholder="Site web">
-          </div>
-        </div>
       </div>
 
       <div class="row top-10">
 
         <div class="col-12 text-right">
           <button type="button" name="clear" class="btn btn-warning btn-lg">Vider</button>
-          <button type="button" name="send" class="btn btn-primary btn-lg">Ajouter cette piste</button>
+          <button type="button" name="send" class="btn btn-primary btn-lg">Ajouter ce musicien</button>
         </div>
 
       </div>
