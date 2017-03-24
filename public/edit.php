@@ -67,26 +67,26 @@
 
       <div class="row top-10">
         <div class="col-3">
-          <button type="button" name="button" class="btn btn-info">Editer les informations</button>
+          <a href="editinfos.php" class="btn btn-info">Editer les informations</a>
         </div>
         <div class="col-3">
-          <button type="button" name="button" class="btn btn-info">Editer les contatcs</button>
-        </div>
-      </div>
-      <div class="row top-10">
-        <div class="col-3">
-          <button type="button" name="button" class="btn btn-info">Editer les commentaires</button>
-        </div>
-        <div class="col-3">
-          <button type="button" name="button" class="btn btn-info">Ajouter un plan de scene</button>
+          <a href="#" class="btn btn-info">Editer les contatcs</a>
         </div>
       </div>
       <div class="row top-10">
         <div class="col-3">
-          <button type="button" name="button" class="btn btn-info">Editer le patch</button>
+          <a href="#" class="btn btn-info">Editer les commentaires</a>
         </div>
         <div class="col-3">
-          <button type="button" name="button" class="btn btn-info">Editer les musiciens</button>
+          <a href="#" class="btn btn-info">Ajouter un plan de scene</a>
+        </div>
+      </div>
+      <div class="row top-10">
+        <div class="col-3">
+          <a href="#" class="btn btn-info">Editer le patch</a>
+        </div>
+        <div class="col-3">
+          <a href="#" class="btn btn-info">Editer les musiciens</a>
         </div>
       </div>
 
