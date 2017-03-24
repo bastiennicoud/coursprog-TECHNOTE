@@ -37,6 +37,14 @@
       </div>
     </div>
 
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          salut
+        </div>
+      </div>
+    </div>
+
     <!-- Diférents scripts -->
     <script src="js/jquery.js"></script>
     <script src="js/tether/js/tether.js"></script>
