@@ -70,12 +70,12 @@
           <a href="editinfos.php" class="btn btn-info">Editer les informations</a>
         </div>
         <div class="col-3">
-          <a href="#" class="btn btn-info">Editer les contatcs</a>
+          <a href="editcontacts.php" class="btn btn-info">Editer les contatcs</a>
         </div>
       </div>
       <div class="row top-10">
         <div class="col-3">
-          <a href="#" class="btn btn-info">Editer les commentaires</a>
+          <a href="editcomments.php" class="btn btn-info">Editer les commentaires</a>
         </div>
         <div class="col-3">
           <a href="#" class="btn btn-info">Ajouter un plan de scene</a>
@@ -83,10 +83,10 @@
       </div>
       <div class="row top-10">
         <div class="col-3">
-          <a href="#" class="btn btn-info">Editer le patch</a>
+          <a href="editpatch.php" class="btn btn-info">Editer le patch</a>
         </div>
         <div class="col-3">
-          <a href="#" class="btn btn-info">Editer les musiciens</a>
+          <a href="editzicos" class="btn btn-info">Editer les musiciens</a>
         </div>
       </div>
 
