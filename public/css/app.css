@@ -59,6 +59,10 @@ body{
   margin-top: 10px;
 }
 
+.top-20{
+  margin-top: 20px;
+}
+
 .top-40{
   margin-top: 40px;
 }
@@ -116,13 +120,17 @@ body{
 /* concerne la page de visualisation des fiches techniques */
 
 .box{
-  background-color: #ecf0f1;
+  background-color: #EEF6FC;
   border-radius: 10px;
   padding: 10px;
 }
 
 .box p{
   margin-bottom: 4px;
+}
+
+.inverse{
+  background-color: #FFF;
 }
 
 .bg-dark{
