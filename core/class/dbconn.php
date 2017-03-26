@@ -34,7 +34,7 @@
      * @param string mot de passe
      * @param string hote
      */
-    public function __construct($db_name = '7a', $db_user = 'root', $db_pass = 'root', $db_host = 'local.dev'){
+    public function __construct($db_name = 'technote', $db_user = 'root', $db_pass = 'root', $db_host = 'local.dev'){
 
       $this->db_name = $db_name;
       $this->db_user = $db_user;

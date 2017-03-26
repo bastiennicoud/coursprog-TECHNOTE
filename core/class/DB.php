@@ -6,7 +6,7 @@
   class DB {
 
     // ici presiser les parametres de connexion a la base de donnée
-    const DB_NAME = '7a';
+    const DB_NAME = 'technote';
     const DB_USER = 'root';
     const DB_PASS = 'root';
     const DB_HOST = 'local.dev';
