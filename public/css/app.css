@@ -4,10 +4,9 @@
 --------------------------
 *  fonts
 *  global rules
-*  inputs layout
 *  Login Box
 *  Home
-*
+*  Technote
 */
 
 
@@ -52,20 +51,34 @@ body{
   height: 100%;
 }
 
+.max-width{
+  width: 100%;
+}
+
 .top-10{
   margin-top: 10px;
+}
+
+.top-20{
+  margin-top: 20px;
 }
 
 .top-40{
   margin-top: 40px;
 }
 
+.bot-10{
+  margin-bottom: 10px;
+}
 
+.bot-40{
+  margin-bottom: 40px;
+}
 
-/* ---- inputs layout ---- */
-
-
-
+.padd-40{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 
 /* ---- Login Box ---- */
 #login-box{
@@ -83,4 +96,43 @@ body{
   background-image: url(../img/live.jpg);
   background-size: cover;
   background-position: center;
+}
+
+#tech-background{
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/live.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.fff{
+  color: #FFF;
+}
+
+.centred{
+  padding-top: 20%;
+  text-shadow: 1px 1px 4px black;
+}
+
+
+/* ---- Technote ---- */
+/* concerne la page de visualisation des fiches techniques */
+
+.box{
+  background-color: #EEF6FC;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.box p{
+  margin-bottom: 4px;
+}
+
+.inverse{
+  background-color: #FFF;
+}
+
+.bg-dark{
+  background-color: #EEF6FC;
 }
