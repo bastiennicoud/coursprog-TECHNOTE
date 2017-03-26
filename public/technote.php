@@ -23,6 +23,7 @@
   </head>
   <body>
 
+    <!-- Header de la page -->
     <div id="tech-background">
       <div class="container centred">
         <div class="row">
@@ -37,13 +38,64 @@
       </div>
     </div>
 
-    <div class="container">
+    <!-- Personnes de contact -->
+    <div class="container padd-40">
+
       <div class="row">
-        <div class="col-sm-4">
-          salut
+        <div class="col-12">
+          <h2>Personnes de contact</h2>
         </div>
       </div>
+
+      <div class="row top-10">
+
+        <div class="col-sm-4">
+          <div class="box">
+            <h4>Bastien Nicoud</h4>
+            <p>Manager</p>
+            <p>bastien.nicoud@cpnv.ch</p>
+            <p>0794567689</p>
+            <p>www.monsite.ch</p>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="box">
+            <h4>Bastien Nicoud</h4>
+            <p>Manager</p>
+            <p>bastien.nicoud@cpnv.ch</p>
+            <p>0794567689</p>
+            <p>www.monsite.ch</p>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="box">
+            <h4>Bastien Nicoud</h4>
+            <p>Manager</p>
+            <p>bastien.nicoud@cpnv.ch</p>
+            <p>0794567689</p>
+            <p>www.monsite.ch</p>
+          </div>
+        </div>
+
+      </div>
+
     </div>
+
+    <!-- Partie commentaires -->
+    <div class="bg-dark">
+      <div class="container padd-40">
+
+        <div class="row">
+          <div class="col-12">
+            <h2>Informations</h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
 
     <!-- Diférents scripts -->
     <script src="js/jquery.js"></script>

@@ -4,10 +4,9 @@
 --------------------------
 *  fonts
 *  global rules
-*  inputs layout
 *  Login Box
 *  Home
-*
+*  Technote
 */
 
 
@@ -64,12 +63,18 @@ body{
   margin-top: 40px;
 }
 
+.bot-10{
+  margin-bottom: 10px;
+}
 
+.bot-40{
+  margin-bottom: 40px;
+}
 
-/* ---- inputs layout ---- */
-
-
-
+.padd-40{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 
 /* ---- Login Box ---- */
 #login-box{
@@ -103,5 +108,23 @@ body{
 
 .centred{
   padding-top: 20%;
-  text-shadow: 1px 1px 4px black; 
+  text-shadow: 1px 1px 4px black;
+}
+
+
+/* ---- Technote ---- */
+/* concerne la page de visualisation des fiches techniques */
+
+.box{
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.box p{
+  margin-bottom: 4px;
+}
+
+.bg-dark{
+  background-color: #EEF6FC;
 }
