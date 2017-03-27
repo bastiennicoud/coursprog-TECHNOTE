@@ -19,6 +19,9 @@
   // route vers la page d'acceuil = formulaire de login
   $router->get('/', function(){ require '../core/wiew/v.login.php'; });
 
+  // route vers le formulaire de login
+  $router->get('/login', function(){ require '../core/wiew/v.login.php'; });
+
   // route lorsque l'on demande un verification du formulaire de login
   $router->post('/login', function(){ require '../core/controller/c.login.php'; });
 

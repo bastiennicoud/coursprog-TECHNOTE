@@ -40,6 +40,12 @@
             </div>
 
             <div class="row">
+              <div id="errors" class="col-12">
+
+              </div>
+            </div>
+
+            <div class="row">
               <div class="input-group input-group-lg">
                 <input type="text" name="username" class="form-control" placeholder="Nom d'utilisateur">
               </div>
@@ -61,8 +67,14 @@
               <div class="input-group input-group-lg">
                 <input type="password" name="passwordconfirm" class="form-control" placeholder="Confirmez le mot de passe">
                 <span class="input-group-btn">
-                  <button class="btn btn-primary" type="button">Go!</button>
+                  <button id="submit" class="btn btn-primary" type="button">Go!</button>
                 </span>
+              </div>
+            </div>
+
+            <div class="row top-10">
+              <div id="success" class="col-12">
+
               </div>
             </div>
 
@@ -76,6 +88,8 @@
 
     <!-- Diférents scripts -->
     <script src="js/jquery.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/tether/js/tether.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/register.js"></script>
   </body>
 </html>

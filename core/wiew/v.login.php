@@ -56,7 +56,7 @@
 
             <div class="row">
               <div class="col-12">
-               <p class="text-center">Vous n'avez pas de compte, <a href="register.php">inscrivez-vous</a></p>
+               <p class="text-center">Vous n'avez pas de compte, <a href="register">inscrivez-vous</a></p>
               </div>
             </div>
 
