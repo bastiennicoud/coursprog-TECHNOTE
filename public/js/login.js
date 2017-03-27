@@ -46,7 +46,7 @@ $(document).ready(function(){
       if (datas.errors.length == 0) {
         $("#errors").empty();
         $("#success").html('<p>Connexion ok</p>');
-        //document.location.href="dashboard";
+        document.location.href="dashboard";
       } else {
         $("#errors").empty();
         $("#errors").html('<div class="alert alert-warning">' + $template + '</div>');

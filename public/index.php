@@ -31,6 +31,13 @@
   // route lorsque lon demande la verification de l'inscription
   $router->post('/register', function(){ require '../core/controller/c.register.php'; });
 
+  // route lorsque lon demande la verification de l'inscription
+  $router->get('/dashboard', function(){
+    $session = new session();
+    $session->verifyUserSession();
+    require '../core/wiew/v.dashboard.php';
+  });
+
 
   // lance la verification de la route
   $router->run();
