@@ -62,6 +62,26 @@
 
     }
 
+
+
+    // ------------------------------
+    // Methodes liées au login
+
+    /**
+     * Methode de vérification de la validité du nom d'utilisateur
+     * @param string le champ a valider
+     */
+    public function validateUsername($field){
+
+      define('', '');
+
+    }
+
+
+
+    // ------------------------------
+    // Methodes liées a l'inscription
+
     /**
      * Methode de vérification de la validité du nom d'utilisateur
      * @param string le champ a valider
@@ -182,9 +202,18 @@
      */
     public function register(){
 
-      //
+      if (empty($this->state["errors"])) {
+
+        $pwdhash = password_hash($this->getField("password"), PASSWORD_BCRYPT);
+
+        $request = "INSERT INTO TN_users (username, email, password) VALUES (?, ?, ?);";
+
+        $data = DB::getDB()->insert($request, [$this->getField("username"), $this->getField("email"), $pwdhash]);
+
+        $this->state["success"]["database"] = "L'utilisateur a bien été crée.";
+
+      }
 
     }
-
 
   }

@@ -40,6 +40,12 @@
             </div>
 
             <div class="row">
+              <div id="errors" class="col-12">
+
+              </div>
+            </div>
+
+            <div class="row">
               <div class="input-group input-group-lg">
                 <input type="text" name="username" class="form-control" placeholder="Nom d'utilisateur">
               </div>
@@ -49,8 +55,14 @@
               <div class="input-group input-group-lg">
                 <input type="password" name="password" class="form-control" placeholder="Mot de passe">
                 <span class="input-group-btn">
-                  <button class="btn btn-primary" type="button">Go!</button>
+                  <button id="submit" class="btn btn-primary" type="button">Go!</button>
                 </span>
+              </div>
+            </div>
+
+            <div class="row top-10">
+              <div id="success" class="col-12">
+
               </div>
             </div>
 
