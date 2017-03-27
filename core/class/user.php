@@ -131,7 +131,7 @@
     }
 
     /**
-     * Methode de vérification de la validité de l'email
+     * Methode de vérification de la validité du mot de passe
      * @param string le champ a valider
      * @param string le champ de confirmation de mot de passe
      */
