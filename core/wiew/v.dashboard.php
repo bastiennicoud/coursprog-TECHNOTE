@@ -83,7 +83,7 @@
           <div class="card-columns">
 
             <div class="card">
-              <img class="card-img-top img-fluid" src="img/live.JPG" alt="Card image cap">
+              <img class="card-img-top img-fluid" src="img/live.jpg" alt="Card image cap">
               <div class="card-block">
                 <h4 class="card-title">Phill Collins</h4>
                 <p class="card-text">Une brève description de quelques mots</p>
