@@ -116,9 +116,21 @@
 
     /**
      * Methode pour connecter l'utilisateur
-     * @param object une instance de la classe de gestion des sessions
+     * @param string nom du champ de l'utilisateur
      */
-    public function login($session){
+    public function login($userfield){
+
+      if (empty($this->state["errors"])) {
+
+        $data = DB::getDB()->prepare("SELECT id_users, username FROM TN_users WHERE username = ?", [$this->getField($userfield)]);
+        
+        // initialisation des sessions
+        $session = new session();
+        $session->createUserSession($data[0]->id_users, $data[0]->username);
+
+        $this->state["success"]["session"] = true;
+
+      }
 
     }
 

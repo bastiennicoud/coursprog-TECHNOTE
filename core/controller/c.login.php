@@ -9,7 +9,7 @@ $user = new user($_POST);
 $user->logUser("username", "password");
 
 // crée la session PHP si le login est ok
-$user->login();
+$user->login("username");
 
 // on renvoie les eventuelles erreurs a l'utilisateur
 echo json_encode($user->getState());
