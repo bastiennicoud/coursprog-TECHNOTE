@@ -64,22 +64,67 @@
 
 
 
-    // ------------------------------
+    // -------------------------------------------------------------------------
     // Methodes liées au login
 
     /**
      * Methode de vérification de la validité du nom d'utilisateur
-     * @param string le champ a valider
+     * @param string le nom du champ utilisateur
+     * @param string le nom du champ de mot de passe
      */
-    public function validateUsername($field){
+    public function logUser($userfield, $pwdfield){
 
-      define('', '');
+      if (strlen($this->getField($userfield)) < 1) {
+
+        $this->state["errors"][$userfield] = "Vous n'avez pas renseigné de nom d'utilisateur";
+        $this->state["success"][$userfield] = false;
+
+      } elseif (strlen($this->getField($pwdfield)) < 1) {
+
+        $this->state["errors"][$pwdfield] = "Vous n'avez pas renseigné de mot de passe";
+        $this->state["success"][$pwdfield] = false;
+
+      } else {
+
+        $data = DB::getDB()->prepare("SELECT * FROM TN_users WHERE username=?", [$this->getField($userfield)]);
+
+        if (empty($data)) {
+
+          $this->state["errors"][$userfield . "exists"] = "Cet utilisateur n'existe pas";
+          $this->state["success"][$userfield] = false;
+
+        } else {
+
+          $this->state["success"][$userfield] = true;
+
+          if (password_verify($this->getField($pwdfield), $data[0]->password)) {
+
+            $this->state["success"][$pwdfield] = true;
+
+          } else {
+
+            $this->state["errors"][$pwdfield . "verify"] = "Le mot de passe est erroné.";
+            $this->state["success"][$pwdfield] = false;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    /**
+     * Methode pour connecter l'utilisateur
+     * @param object une instance de la classe de gestion des sessions
+     */
+    public function login($session){
 
     }
 
 
 
-    // ------------------------------
+    // -------------------------------------------------------------------------
     // Methodes liées a l'inscription
 
     /**
