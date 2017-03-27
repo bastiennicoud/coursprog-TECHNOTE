@@ -19,14 +19,30 @@
   // route vers la page d'acceuil = formulaire de login
   $router->get('/', function(){ require '../core/wiew/v.login.php'; });
 
+  // route vers le formulaire de login
+  $router->get('/login', function(){ require '../core/wiew/v.login.php'; });
+
   // route lorsque l'on demande un verification du formulaire de login
   $router->post('/login', function(){ require '../core/controller/c.login.php'; });
+
+  // route vers la page d'acceuil = formulaire de login
+  $router->get('/disconnect', function(){
+    $session = new session();
+    $session->destroySession();
+  });
 
   // route lorsque on demande le formulaire d'inscription
   $router->get('/register', function(){ require '../core/wiew/v.register.php'; });
 
   // route lorsque lon demande la verification de l'inscription
   $router->post('/register', function(){ require '../core/controller/c.register.php'; });
+
+  // route lorsque lon demande la verification de l'inscription
+  $router->get('/dashboard', function(){
+    $session = new session();
+    $session->verifyUserSession();
+    require '../core/wiew/v.dashboard.php';
+  });
 
 
   // lance la verification de la route
