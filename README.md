@@ -3,8 +3,14 @@
 Création d'une petite application web dans le cadre de cours de programation 4ème année média
 
 
-## V1.0
-Sdate actuel : front terminé, routing, autoloading et conn a la base de données ok
+## V1.1
+Sdate actuel :
+
+Front: **OK**
+Autolading: **OK**
+Routing: **OK**
+Authentification: **OK**
+
 
 #### TECHNOTE
 
