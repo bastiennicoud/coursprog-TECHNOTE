@@ -39,10 +39,10 @@
             <a class="nav-link disabled" href="#">ADMIN</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Mes fiches techniques</a>
+            <a class="nav-link active" href="dashboard">Mes fiches techniques</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Déconnexion</a>
+            <a class="nav-link" href="disconnect">Déconnexion</a>
           </li>
         </ul>
 
