@@ -3,13 +3,14 @@
 Création d'une petite application web dans le cadre de cours de programation 4ème année média
 
 
-## V1.1
+## V1.2
 Sdate actuel :
 
 Front: **OK**
 Autolading: **OK**
 Routing: **OK**
 Authentification: **OK**
+Affichage fiche tech: **OK**
 
 
 #### TECHNOTE
