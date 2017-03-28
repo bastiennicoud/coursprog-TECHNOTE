@@ -17,13 +17,13 @@
   //------------------------------------------------------
 
   // route vers la page d'acceuil = formulaire de login
-  $router->get('/', function(){ WIEW::getwiew("login", false);//require '../core/wiew/v.login.php'; });
+  $router->get('/', function(){ WIEW::getwiew("login", false, false); });
 
   // route vers le formulaire de login
-  $router->get('/login', function(){ require '../core/wiew/v.login.php'; });
+  $router->get('/login', function(){ WIEW::getwiew("login", false, false); });
 
   // route lorsque l'on demande un verification du formulaire de login
-  $router->post('/login', function(){ require '../core/controller/c.login.php'; });
+  $router->post('/login', function(){ WIEW::getCtrl("login", false); });
 
   // route vers la page d'acceuil = formulaire de login
   $router->get('/disconnect', function(){
@@ -32,17 +32,13 @@
   });
 
   // route lorsque on demande le formulaire d'inscription
-  $router->get('/register', function(){ require '../core/wiew/v.register.php'; });
+  $router->get('/register', function(){ WIEW::getwiew("register", false, false); });
 
   // route lorsque lon demande la verification de l'inscription
-  $router->post('/register', function(){ require '../core/controller/c.register.php'; });
+  $router->post('/register', function(){ WIEW::getCtrl("register", false); });
 
   // route lorsque lon demande la page de tableau de bord
-  $router->get('/dashboard', function(){
-    $session = new session();
-    $session->verifyUserSession();
-    require '../core/wiew/v.dashboard.php';
-  });
+  $router->get('/dashboard', function(){ WIEW::getwiew("dashboard", true, true); });
 
 
   // lance la verification de la route

@@ -5,7 +5,14 @@
   class WIEW{
 
     // appelle la vue demandée
-    public static function getWiew($name, $nav){
+    public static function getWiew($name, $nav, $session){
+
+      if ($session === true) {
+
+        $session = new session();
+        $session->verifyUserSession();
+
+      }
 
       require "../core/wiew/template/header.php";
 
@@ -22,7 +29,16 @@
 
     }
 
-    public static function getCtrl($name){
+    public static function getCtrl($name, $session){
+
+      if ($session === true) {
+
+        $session = new session();
+        $session->verifyUserSession();
+
+      }
+
+      require "../core/controller/c.$name.php";
 
     }
 

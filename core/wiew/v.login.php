@@ -1,6 +1,3 @@
-<!-- Appel du header -->
-<?php require '../core/wiew/template/header.php'; ?>
-
     <div id="home-background">
 
       <div class="container max-height">
@@ -57,11 +54,3 @@
       </div>
 
     </div>
-
-    <!-- Diférents scripts -->
-    <script src="js/jquery.js"></script>
-    <script src="js/tether/js/tether.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="js/login.js"></script>
-  </body>
-</html>

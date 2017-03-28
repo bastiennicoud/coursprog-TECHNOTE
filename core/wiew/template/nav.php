@@ -21,15 +21,5 @@
       </li>
     </ul>
 
-    <form class="form-inline my-2 my-lg-0">
-      <div class="input-group">
-        <input class="form-control" type="text" placeholder="Rechercher">
-        <span class="input-group-btn">
-          <button class="btn btn-primary" type="button">Go!</button>
-        </span>
-      </div>
-
-    </form>
-
   </div>
 </nav>
