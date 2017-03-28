@@ -1,14 +1,10 @@
 <?php
 
   // on initialise l'objet technote (qui permet d'acceder a toutes les infos d'une fiche tech)
-  $technote = new technote($_POST["id"]);
+  $technote = new technote($_GET["id"]);
 
   // on vérifie que l'utilisateur connecté y a acess
-  $check = $technote->verifyPin($_POST["pin"]);
-
-  if ($check !== true) {
-    header("Location: technote?id=" . $_POST["id"]);
-  }
+  $technote->verifyUser($session->getUserID());
 
   // recupere les infos pour le header
   $header = $technote->getHeader();
@@ -237,7 +233,7 @@
           </div>
 
           <div class="col-sm-4 top-10">
-            <p class="text-center"></p>
+            <p class="text-center">Crée par <?= $session->getUser() ?></p>
           </div>
 
           <div class="col-sm-4 top-10">

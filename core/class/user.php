@@ -123,7 +123,7 @@
       if (empty($this->state["errors"])) {
 
         $data = DB::getDB()->prepare("SELECT id_users, username FROM TN_users WHERE username = ?", [$this->getField($userfield)]);
-        
+
         // initialisation des sessions
         $session = new session();
         $session->createUserSession($data[0]->id_users, $data[0]->username);

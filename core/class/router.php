@@ -8,12 +8,14 @@
     private $url;
     private $routes = [];
 
+    // constructeur
     public function __construct($url){
 
       $this->url = $url;
 
     }
 
+    // gere les appels en get
     public function get($path, $callable){
 
       $route = new route($path, $callable);
@@ -21,6 +23,7 @@
 
     }
 
+    // gere les appels en post
     public function post($path, $callable){
 
       $route = new route($path, $callable);
