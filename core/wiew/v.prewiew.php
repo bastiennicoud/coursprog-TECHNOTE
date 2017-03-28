@@ -1,23 +1,37 @@
 <?php
 
-  $technote = new technote();
+  // on initialise l'objet technote (qui permet d'acceder a toutes les infos d'une fiche tech)
+  $technote = new technote($_GET["id"]);
+
+  // on vérifie que l'utilisateur connecté y a acess
+  $technote->verifyUser($session->getUserID());
+
+  // recupere les infos pour le header
+  $header = $technote->getHeader();
 
 ?>
 
     <!-- Header de la page -->
-    <div id="tech-background">
+    <div id="tech-background" style="background-image: url(img/cover/<?= $header["image"] ?>);">
+      <a href="dashboard">Retout au tableau de bord</a>
       <div class="container centred">
         <div class="row">
           <h2 class="text-center max-width fff">Fiche technique</h2>
         </div>
         <div class="row">
-          <h1 class="text-center max-width fff">Nom du groupe</h1>
+          <h1 class="text-center max-width fff big"><?= $header["name"] ?></h1>
         </div>
         <div class="row">
-          <h2 class="text-center max-width fff">24.03.2017</h2>
+          <h2 class="text-center max-width fff"><?= $header["date"] ?></h2>
         </div>
       </div>
     </div>
+
+<?php
+
+  $header = $technote->getHeader();
+
+?>
 
     <!-- description du groupe -->
     <div class="bg-dark">
