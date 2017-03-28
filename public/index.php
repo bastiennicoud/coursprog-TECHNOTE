@@ -17,7 +17,7 @@
   //------------------------------------------------------
 
   // route vers la page d'acceuil = formulaire de login
-  $router->get('/', function(){ require '../core/wiew/v.login.php'; });
+  $router->get('/', function(){ WIEW::getwiew("login", false);//require '../core/wiew/v.login.php'; });
 
   // route vers le formulaire de login
   $router->get('/login', function(){ require '../core/wiew/v.login.php'; });

@@ -31,6 +31,10 @@
 
         exit();
 
+      } else {
+
+        return true;
+        
       }
 
     }

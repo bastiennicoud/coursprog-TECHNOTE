@@ -36,7 +36,7 @@
         <ul class="navbar-nav mr-auto">
 
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">ADMIN</a>
+            <a class="nav-link disabled" href="#"><?= $session->getUser(); ?></a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="dashboard">Mes fiches techniques</a>
