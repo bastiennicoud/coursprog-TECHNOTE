@@ -37,7 +37,7 @@
   // route lorsque lon demande la verification de l'inscription
   $router->post('/register', function(){ require '../core/controller/c.register.php'; });
 
-  // route lorsque lon demande la verification de l'inscription
+  // route lorsque lon demande la page de tableau de bord
   $router->get('/dashboard', function(){
     $session = new session();
     $session->verifyUserSession();
