@@ -1,14 +1,15 @@
 <?php
 
-  // classe pour la gestion des fiches techniques
+  // classe pa recuperation de touts les infos d'une fiche tchnique
   class technote{
 
     /**
-     * @var string nom de l'utilisateur
+     * @var string id de la fiche tedchnique
      */
-    private $user = "";
+    private $technoteid = "";
+
     /**
-     * @var string id de l'utilisateur
+     * @var string id de la fiche tedchnique
      */
     private $userid = "";
 
@@ -17,59 +18,16 @@
      * @param string nom de l'utilisateur
      * @param string id de l'utilisateur
      */
-    public function __construct($user, $userid){
+    public function __construct($technoteid, $userid){
 
-      $this->user = $user;
-      $this->userid = $userid;
+      $data = DB::getDB()->prepare("SELECT id_users FROM TN_users INNER JOIN TN_technicalnotes ON id_users=idx_user WHERE id_technicalnote=?", [$technoteid]);
 
-    }
+      if ($data[0]->id_users == $userid){
 
-    /**
-     * permet d'obtenir une card (mise en forme bootstrap) pour chaque fiche technique
-     * @param string nom de l'utilisateur
-     * @param string id de l'utilisateur
-     */
-    public function getCard(){
-
-      // recuperation des infos dans la bd
-      $datas = DB::getDB()->prepare("SELECT TN_technicalnotes.id_technicalnote, TN_technicalnotes.name, TN_technicalnotes.description, TN_technicalnotes.pincode, TN_technicalnotes.linkhash, TN_technicalnotes.lastedit, TN_informations.image
-                                      FROM TN_technicalnotes
-                                      INNER JOIN TN_users ON TN_technicalnotes.idx_user=TN_users.id_users
-                                      INNER JOIN TN_informations ON TN_technicalnotes.id_technicalnote=TN_informations.idx_technicalnote
-                                      WHERE TN_users.id_users = ?;",
-                                    [$this->userid]);
-
-
-      $template = "";
-
-      // crée la mise en forme pour chaque card
-      foreach ($datas as $key => $value) {
-
-        $template = $template . "
-          <div class='card'>
-            <img class='card-img-top img-fluid' src='img/cover/" . $value->image . "' alt='Photo du group " . $value->name . "'>
-            <div class='card-block'>
-              <h4 class='card-title'>" . $value->name . "</h4>
-              <p class='card-text'>" . $value->description . "</p>
-              <p class='card-text'>Code pin <span class='badge badge-default'>" . $value->pincode . "</span></p>
-              <p class='card-text'>Lien de partage : <a href='bnicoud.eleves.mediamatique.ch/technote/public/" . $value->linkhash . "' class='card-link'>link</a></p>
-              <p class='card-text'><small class='text-muted'>Derniere mise a jour " . $value->lastedit . "</small></p>
-            </div>
-
-            <div class='card-block'>
-                <a href='prewiew/" . $value->id_technicalnote . "' class='btn btn-info'>Prévisualiser</a>
-            </div>
-
-            <div class='card-footer'>
-              <a href='edit/" . $value->id_technicalnote . "' class='btn btn-primary'>Editer</a>
-              <a href='delete/" . $value->id_technicalnote . "' class='btn btn-danger'>Supprimer</a>
-            </div>
-          </div>
-        ";
-
+        $this->technoteid = $technoteid;
+        $this->userid = $userid;
+        
       }
-
-      return $template;
 
     }
 

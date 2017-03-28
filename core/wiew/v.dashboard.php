@@ -20,7 +20,7 @@
       <div class="card-columns">
 
         <?php
-          $technotes = new technote($session->getUser(), $session->getUserID());
+          $technotes = new technoteinfos($session->getUser(), $session->getUserID());
 
           echo $technotes->getCard();
         ?>

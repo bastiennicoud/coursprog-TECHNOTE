@@ -43,6 +43,9 @@
   // route lorsque lon demande la page de tableau de bord
   $router->get('/new', function(){ WIEW::getwiew("new", true, true); });
 
+  // route lorsque lon demande la page de tableau de bord
+  $router->get('/prewiew', function(){ WIEW::getwiew("prewiew", false, true); });
+
 
   // lance la verification de la route
   $router->run();
