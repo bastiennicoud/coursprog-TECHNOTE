@@ -19,6 +19,11 @@
         <div class="col-12">
           <div class="card-columns">
 
+            <?php
+              $technotes = new technote($session->getUser(), $session->getUserID());
+
+              var_dump($technotes->getCard());
+            ?>
             <div class="card">
               <img class="card-img-top img-fluid" src="img/live.jpg" alt="Card image cap">
               <div class="card-block">

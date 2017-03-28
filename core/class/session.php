@@ -34,7 +34,7 @@
       } else {
 
         return true;
-        
+
       }
 
     }
@@ -54,6 +54,13 @@
     public function getUser(){
 
       return $_SESSION["username"];
+
+    }
+
+    // renvoie l'id de l'utilisateur stoqué dans la session
+    public function getUserID(){
+
+      return $_SESSION["userid"];
 
     }
 
