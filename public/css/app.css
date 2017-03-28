@@ -101,9 +101,12 @@ body{
 #tech-background{
   height: 100%;
   width: 100%;
-  background-image: url(../img/live.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.big{
+  font-size: 58px;
 }
 
 .fff{

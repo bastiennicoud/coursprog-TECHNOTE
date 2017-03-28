@@ -17,13 +17,13 @@
   //------------------------------------------------------
 
   // route vers la page d'acceuil = formulaire de login
-  $router->get('/', function(){ require '../core/wiew/v.login.php'; });
+  $router->get('/', function(){ WIEW::getwiew("login", false, false); });
 
   // route vers le formulaire de login
-  $router->get('/login', function(){ require '../core/wiew/v.login.php'; });
+  $router->get('/login', function(){ WIEW::getwiew("login", false, false); });
 
   // route lorsque l'on demande un verification du formulaire de login
-  $router->post('/login', function(){ require '../core/controller/c.login.php'; });
+  $router->post('/login', function(){ WIEW::getCtrl("login", false); });
 
   // route vers la page d'acceuil = formulaire de login
   $router->get('/disconnect', function(){
@@ -32,17 +32,25 @@
   });
 
   // route lorsque on demande le formulaire d'inscription
-  $router->get('/register', function(){ require '../core/wiew/v.register.php'; });
+  $router->get('/register', function(){ WIEW::getwiew("register", false, false); });
 
   // route lorsque lon demande la verification de l'inscription
-  $router->post('/register', function(){ require '../core/controller/c.register.php'; });
+  $router->post('/register', function(){ WIEW::getCtrl("register", false); });
 
-  // route lorsque lon demande la verification de l'inscription
-  $router->get('/dashboard', function(){
-    $session = new session();
-    $session->verifyUserSession();
-    require '../core/wiew/v.dashboard.php';
-  });
+  // route lorsque lon demande la page de tableau de bord
+  $router->get('/dashboard', function(){ WIEW::getwiew("dashboard", true, true); });
+
+  // route lorsque lon demande la page de tableau de bord
+  $router->get('/new', function(){ WIEW::getwiew("new", true, true); });
+
+  // route lorsque lon demande la prévisualisation de la fiche technique
+  $router->get('/prewiew', function(){ WIEW::getwiew("prewiew", false, true); });
+
+  // route lorsque lon demande a acceder a une fiche technique -> demande le pin
+  $router->get('/technote', function(){ WIEW::getwiew("pin", false, false); });
+
+  // route lorsque lon demande a acceder a une fiche technique -> verifie le pin et affiche la fiche
+  $router->post('/technote', function(){ WIEW::getwiew("technote", false, false); });
 
 
   // lance la verification de la route

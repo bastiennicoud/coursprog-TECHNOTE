@@ -25,9 +25,15 @@
 
       if(!isset($_SESSION['username']) && !isset($_SESSION['userid'])){
 
+        session_destroy();
+
         header("Location: login");
 
         exit();
+
+      } else {
+
+        return true;
 
       }
 
@@ -41,6 +47,20 @@
       header("Location: login");
 
       exit();
+
+    }
+
+    // renvoie le nom de l'utilisateur stoqué dans la bd
+    public function getUser(){
+
+      return $_SESSION["username"];
+
+    }
+
+    // renvoie l'id de l'utilisateur stoqué dans la session
+    public function getUserID(){
+
+      return $_SESSION["userid"];
 
     }
 

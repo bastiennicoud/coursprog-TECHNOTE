@@ -18,7 +18,7 @@
 
     public function match($url){
 
-      // retire les /
+      // retire les / et fait correspondre l'url
       $url = trim($url,'/');
       $path = preg_replace('#:([\w]+)#', '([^/]+)', $this->path);
       $regex = "#^$path$#i";
