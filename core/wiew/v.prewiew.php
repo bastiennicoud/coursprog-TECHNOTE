@@ -13,7 +13,7 @@
 
     <!-- Header de la page -->
     <div id="tech-background" style="background-image: url(img/cover/<?= $header["image"] ?>);">
-      <a href="dashboard">Retout au tableau de bord</a>
+      <a href="dashboard">Retour au tableau de bord</a>
       <div class="container centred">
         <div class="row">
           <h2 class="text-center max-width fff">Fiche technique</h2>
@@ -29,7 +29,7 @@
 
 <?php
 
-  $header = $technote->getHeader();
+  $description = $technote->getDescription();
 
 ?>
 
@@ -45,12 +45,18 @@
 
         <div class="row">
           <div class="col-12">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p><?= $description["description"] ?></p>
           </div>
         </div>
 
       </div>
     </div>
+
+<?php
+
+  $contacts = $technote->getContacts();
+
+?>
 
     <!-- Personnes de contact -->
     <div class="container padd-40">
@@ -63,40 +69,30 @@
 
       <div class="row top-10">
 
-        <div class="col-sm-4">
-          <div class="box">
-            <h4>Bastien Nicoud</h4>
-            <p>Manager</p>
-            <p>bastien.nicoud@cpnv.ch</p>
-            <p>0794567689</p>
-            <p>www.monsite.ch</p>
-          </div>
-        </div>
 
-        <div class="col-sm-4">
-          <div class="box">
-            <h4>Bastien Nicoud</h4>
-            <p>Manager</p>
-            <p>bastien.nicoud@cpnv.ch</p>
-            <p>0794567689</p>
-            <p>www.monsite.ch</p>
-          </div>
-        </div>
+<?php foreach ($contacts["contacts"] as $key => $value) { ?>
 
-        <div class="col-sm-4">
-          <div class="box">
-            <h4>Bastien Nicoud</h4>
-            <p>Manager</p>
-            <p>bastien.nicoud@cpnv.ch</p>
-            <p>0794567689</p>
-            <p>www.monsite.ch</p>
+          <div class="col-sm-4">
+            <div class="box">
+              <h4><?= $value->name ?></h4>
+              <p><?= $value->function ?></p>
+              <p><?= $value->email ?></p>
+              <p><?= $value->phone ?></p>
+              <p><?= $value->website ?></p>
+            </div>
           </div>
-        </div>
+
+<?php } ?>
 
       </div>
 
     </div>
 
+<?php
+
+  $comments = $technote->getComments();
+
+?>
     <!-- Partie commentaires -->
     <div class="bg-dark">
       <div class="container padd-40">
@@ -109,34 +105,28 @@
 
         <div class="row top-10">
 
-          <div class="col-sm-12">
-            <div class="box inverse">
-              <h4>Acceuil technique</h4>
-              <p class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
+<?php foreach ($comments["comments"] as $key => $value) { ?>
 
           <div class="col-sm-6 top-20">
             <div class="box inverse">
-              <h4>Acceuil technique</h4>
-              <p class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <h4><?= $value->title ?></h4>
+              <p class="font-weight-bold"><?= $value->head ?></p>
+              <p><?= $value->commentar ?></p>
             </div>
           </div>
 
-          <div class="col-sm-6 top-20">
-            <div class="box inverse">
-              <h4>Acceuil technique</h4>
-              <p class="font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            </div>
-          </div>
+<?php } ?>
 
         </div>
 
       </div>
     </div>
+
+<?php
+
+  $patch = $technote->getPatch();
+
+?>
 
     <!-- Patchlist -->
     <div class="container padd-40">
@@ -161,48 +151,19 @@
               </tr>
             </thead>
             <tbody>
+
+<?php foreach ($patch as $key => $value) { ?>
+
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
+                <th scope="row"><?= $value->input ?></th>
+                <td><?= $value->instrument ?></td>
+                <td><?= $value->microphone ?></td>
+                <td><?= $value->fx ?></td>
+                <td><?= $value->monitormix ?></td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>@mdo</td>
-              </tr>
+
+<?php } ?>
+
             </tbody>
           </table>
 
@@ -210,6 +171,12 @@
       </div>
 
     </div>
+
+<?php
+
+  $musicians = $technote->getMusicians();
+
+?>
 
     <!-- Musiciens et plan de scene -->
     <div class="bg-dark">
@@ -224,7 +191,7 @@
         <div class="row top-10">
 
           <div class="col-md-8">
-            <img src="img/stage/abc.jpg" width="100%" alt="Plan de scene">
+            <img src="img/plan/<?= $technote->getPlan() ?>" width="100%" alt="Plan de scene">
           </div>
 
           <div class="col-md-4">
@@ -232,42 +199,21 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>#</th>
                   <th>Name</th>
                   <th>Instrument</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                </tr>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                </tr>
+
+<?php foreach ($musicians as $key => $value) { ?>
+
+              <tr>
+                <td><?= $value->name ?></td>
+                <td><?= $value->instrument ?></td>
+              </tr>
+
+<?php } ?>
+
               </tbody>
             </table>
 
@@ -287,11 +233,11 @@
           </div>
 
           <div class="col-sm-4 top-10">
-            <p class="text-center">Crée par admin</p>
+            <p class="text-center">Crée par <?= $session->getUser() ?></p>
           </div>
 
           <div class="col-sm-4 top-10">
-            <p class="text-right"><a href="#">Editer</a></p>
+            <p class="text-right"><a href="login">Editer</a></p>
           </div>
 
         </div>

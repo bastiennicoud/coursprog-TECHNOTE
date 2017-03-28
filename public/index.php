@@ -43,8 +43,14 @@
   // route lorsque lon demande la page de tableau de bord
   $router->get('/new', function(){ WIEW::getwiew("new", true, true); });
 
-  // route lorsque lon demande la page de tableau de bord
+  // route lorsque lon demande la prévisualisation de la fiche technique
   $router->get('/prewiew', function(){ WIEW::getwiew("prewiew", false, true); });
+
+  // route lorsque lon demande a acceder a une fiche technique -> demande le pin
+  $router->get('/technote', function(){ WIEW::getwiew("pin", false, false); });
+
+  // route lorsque lon demande a acceder a une fiche technique -> verifie le pin et affiche la fiche
+  $router->post('/technote', function(){ WIEW::getwiew("technote", false, false); });
 
 
   // lance la verification de la route

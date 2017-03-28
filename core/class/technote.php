@@ -56,9 +56,19 @@
      * verification des droit de consultation avec PIN
      * @param string pin renseigné
      */
-    public function verifyPin($userid){
+    public function verifyPin($pin){
 
-      //
+      $data = DB::getDB()->prepare("SELECT pincode FROM TN_technicalnotes WHERE id_technicalnote=?", [$this->technoteid]);
+
+      if ($data[0]->pincode !== $pin) {
+
+        return false;
+
+      } else {
+
+        return true;
+
+      }
 
     }
 
@@ -98,6 +108,78 @@
         "date" => $date[0],
         "image" => $this->technote["infos"][0]->image
       );
+
+    }
+
+    /**
+     * renvoie les infos pour générer la description
+     */
+    public function getDescription(){
+
+      $this->getTechnote();
+
+      return array(
+        "description" => $this->technote["infos"][0]->descriptio
+      );
+
+    }
+
+    /**
+     * renvoie les infos pour générer les contacts
+     */
+    public function getContacts(){
+
+      $this->getTechnote();
+
+      return array(
+        "contacts" => $this->technote["contacts"]
+      );
+
+    }
+
+    /**
+     * renvoie les infos pour générer les commentaires
+     */
+    public function getComments(){
+
+      $this->getTechnote();
+
+      return array(
+        "comments" => $this->technote["comments"]
+      );
+
+    }
+
+    /**
+     * renvoie le patch complet
+     */
+    public function getPatch(){
+
+      $this->getTechnote();
+
+      return $this->technote["patch"];
+
+    }
+
+    /**
+     * renvoie tous les musiciens
+     */
+    public function getMusicians(){
+
+      $this->getTechnote();
+
+      return $this->technote["musicians"];
+
+    }
+
+    /**
+     * renvoie le nom du plan de scene
+     */
+    public function getPlan(){
+
+      $this->getTechnote();
+
+      return $this->technote["infos"][0]->stageplan;
 
     }
 
