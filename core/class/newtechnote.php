@@ -116,4 +116,8 @@
 
     }
 
+    public function updateInfos(){
+      
+    }
+
   }

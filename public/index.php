@@ -70,5 +70,8 @@
   // route lorsque lon demande la page d'edition
   $router->get('/editinfos', function(){ WIEW::getwiew("editinfos", true, true); });
 
+  // route lorsque lon soummet les infos pour la création d'une nouvelle fiche tech
+  $router->post('/editinfos', function(){ WIEW::getCtrl("editinfos", true); });
+
   // lance la verification de la route
   $router->run();
