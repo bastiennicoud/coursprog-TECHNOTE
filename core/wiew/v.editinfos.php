@@ -1,10 +1,21 @@
+<?php
 
+  // on initialise l'objet technote (qui permet d'acceder a toutes les infos d'une fiche tech)
+  $technote = new technote($session->getEdit());
+
+  // on vérifie que l'utilisateur connecté y a acess
+  $technote->verifyUser($session->getUserID());
+
+  // recupere les infos pour le header
+  $header = $technote->getInfos();
+
+?>
 
     <div class="container">
 
       <div class="row top-40">
         <div class="col-12">
-          <h1>Editer les informations <small>Phill Collins</small></h1>
+          <h1>Editer les informations <small><?= $header["band"] ?></small></h1>
         </div>
       </div>
 
@@ -13,17 +24,17 @@
         <div class="col-sm-6 top-40">
           <h3>Informations générales</h3>
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Nom de la fiche tech">
+            <input type="text" class="form-control" placeholder="Nom de la fiche tech" value="<?= $header["name"] ?>">
             <span class="input-group-btn">
               <button type="button" class="btn btn-info" data-toggle="name" title="Nom" data-content="Ce nom sérvira uniquement pour l'organisation des fiches techniques, il n'aparaitra pas sur la fiche technique.">i</button>
             </span>
           </div>
           <br>
           <div class="form-group">
-            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Description"></textarea>
+            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Description"><?= $header["description"] ?></textarea>
           </div>
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Pin">
+            <input type="text" class="form-control" placeholder="Pin" value="<?= $header["pincode"] ?>">
             <span class="input-group-btn">
               <button type="button" class="btn btn-info" data-toggle="pin" title="Pin" data-content="Entrez un code pin a 4 chiffres, les personnes voulant visualiser votre fiche technique devront rentrer ce code.">i</button>
             </span>
@@ -33,24 +44,18 @@
         <div class="col-sm-6 top-40">
           <h3>Informations du groupe</h3>
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Nom du groupe">
+            <input type="text" class="form-control" placeholder="Nom du groupe" value="<?= $header["band"] ?>">
             <span class="input-group-btn">
               <button type="button" class="btn btn-info" data-toggle="bandname" data-placement="left" title="Nom du groupe" data-content="Précisez le nom du groupe concérné par la fiche technique.">i</button>
             </span>
           </div>
           <br>
           <div class="form-group">
-            <input type="date" class="form-control">
+            <input type="date" class="form-control" value="<?= $header["date"] ?>">
           </div>
           <br>
           <div class="form-group">
-            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Descriptif du style du groupe."></textarea>
-          </div>
-          <br>
-          <div class="form-group">
-            <label for="exampleInputFile">Image du groupe</label>
-            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-            <small id="fileHelp" class="form-text text-muted">Choisisez une image pour illustrer votre fiche technique.</small>
+            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Descriptif du style du groupe."><?= $header["descriptio"] ?></textarea>
           </div>
         </div>
 
