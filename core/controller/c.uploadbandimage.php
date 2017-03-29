@@ -23,7 +23,7 @@
   $technoteinfos = new technoteinfos($session->getUser(), $session->getUserID());
 
   // création du nom pour l'image
-  $name = $session->getEdit() . $technoteinfos->getTechName($session->getEdit());
+  $name = $session->getEdit() . str_replace(' ', '', $technoteinfos->getTechName($session->getEdit()));
   // creation d'un nom pour l'image
   $imagename = $name . "." . $uploadedformat;
 

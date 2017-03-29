@@ -52,7 +52,7 @@
               <h4 class='card-title'>" . $value->name . "</h4>
               <p class='card-text'>" . $value->description . "</p>
               <p class='card-text'>Code pin <span class='badge badge-default'>" . $value->pincode . "</span></p>
-              <p class='card-text'>Lien de partage : <a href='bnicoud.eleves.mediamatique.ch/technote/public/technote" . $value->linkhash . "' class='card-link'>link</a></p>
+              <p class='card-text'>Lien de partage : <a href='technote" . $value->linkhash . "' class='card-link'>link</a></p>
               <p class='card-text'><small class='text-muted'>Derniere mise a jour " . $value->lastedit . "</small></p>
             </div>
 
@@ -75,9 +75,9 @@
 
     public function getTechName($id) {
 
-      $data = DB::getDB()->prepare("SELECT name FROM TN_technicalnotes WHERE id_technicalnote=?", [$id]);
+      $data = DB::getDB()->prepare("SELECT band FROM TN_informations WHERE idx_technicalnote=?", [$id]);
 
-      return $data[0]->name;
+      return $data[0]->band;
 
     }
 

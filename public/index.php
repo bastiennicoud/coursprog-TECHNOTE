@@ -67,8 +67,19 @@
   // script pour suvegarder l'image
   $router->post('/uploadbandimage', function(){ WIEW::getCtrl("uploadbandimage", true); });
 
+
   // route lorsque lon demande la page d'edition
   $router->get('/editinfos', function(){ WIEW::getwiew("editinfos", true, true); });
+
+  // route lorsque lon soummet les infos pour la création d'une nouvelle fiche tech
+  $router->post('/editinfos', function(){ WIEW::getCtrl("editinfos", true); });
+
+
+  // route lorsque lon demande la page d'edition
+  $router->get('/editcontacts', function(){ WIEW::getwiew("editcontacts", true, true); });
+
+  // route lorsque lon soummet les infos pour la création d'une nouvelle fiche tech
+  $router->post('/editcontacts', function(){ WIEW::getCtrl("editcontacts", true); });
 
   // lance la verification de la route
   $router->run();
