@@ -64,4 +64,11 @@
 
     }
 
+    // renvoie l'id de l'utilisateur stoqué dans la session
+    public function activeEdit($id){
+
+      $_SESSION["activeEdit"] = $id;
+
+    }
+    
   }

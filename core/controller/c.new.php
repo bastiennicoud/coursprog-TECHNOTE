@@ -17,6 +17,8 @@
     // ecriture dans la bd
     $newtechnote->writeNew();
 
+    $session->activeEdit($newtechnote->id);
+
     // redirection
     echo json_encode($newtechnote->state);
 

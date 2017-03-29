@@ -51,11 +51,6 @@
             <textarea class="form-control" name="banddescription" rows="3" placeholder="Descriptif du style du groupe."></textarea>
           </div>
           <br>
-          <div class="form-group">
-            <label for="exampleInputFile">Image du groupe</label>
-            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-            <small id="fileHelp" class="form-text text-muted">Choisisez une image pour illustrer votre fiche technique.</small>
-          </div>
         </div>
 
       </div>

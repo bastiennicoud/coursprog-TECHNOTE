@@ -13,6 +13,10 @@
      */
     private $user;
     /**
+     * @var integer stoquera l'in de la technote en cors d'edition
+     */
+    public $id;
+    /**
      * @var array stoque le status des verifications (erreurs et success)
      */
     public $state = [
@@ -100,15 +104,15 @@
       $data = DB::getDB()->insert($sql, $datas);
 
       $image = trim($this->infos["name"]) . ".jpg";
-      $lastid = DB::getDB()->lastId();
-      $link = "?id=" . $lastid;
+      $this->lastid = DB::getDB()->lastId();
+      $link = "?id=" . $this->lastid;
 
       $sql = "INSERT INTO TN_informations (idx_technicalnote, band, descriptio, date, image, stageplan)
               VALUES (?, ?, ?, ?, ?, ?);";
-      $datas = [$lastid, $this->infos["bandname"], $this->infos["banddescription"], $this->infos["date"], $image, $image];
+      $datas = [$this->lastid, $this->infos["bandname"], $this->infos["banddescription"], $this->infos["date"], $image, $image];
 
       $data = DB::getDB()->insert($sql, $datas);
-      $data = DB::getDB()->insert("INSERT INTO TN_technicalnotes (linkhash) VALUES (?);", [$link]);
+      $data = DB::getDB()->insert("UPDATE TN_technicalnotes SET linkhash = ? WHERE id_technicalnote=?;", [$link, $this->lastid]);
 
     }
 
