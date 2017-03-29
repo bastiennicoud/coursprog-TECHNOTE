@@ -84,7 +84,7 @@
 
         $this->technote["technote"] = DB::getDB()->prepare("SELECT name, description, lastedit, pincode FROM TN_technicalnotes WHERE id_technicalnote=?", [$this->technoteid]);
         $this->technote["infos"] = DB::getDB()->prepare("SELECT band, descriptio, date, image, stageplan FROM TN_informations WHERE idx_technicalnote=?", [$this->technoteid]);
-        $this->technote["contacts"] = DB::getDB()->prepare("SELECT name, email, phone, website, function FROM TN_contacts WHERE idx_technicalnote=?", [$this->technoteid]);
+        $this->technote["contacts"] = DB::getDB()->prepare("SELECT id_contact, name, email, phone, website, function FROM TN_contacts WHERE idx_technicalnote=?", [$this->technoteid]);
         $this->technote["comments"] = DB::getDB()->prepare("SELECT title, head, commentar FROM TN_comments WHERE idx_technicalnote=?", [$this->technoteid]);
         $this->technote["patch"] = DB::getDB()->prepare("SELECT input, instrument, microphone, fx, monitormix FROM TN_patchlists WHERE idx_technicalnote=?", [$this->technoteid]);
         $this->technote["musicians"] = DB::getDB()->prepare("SELECT name, instrument FROM TN_musicians WHERE idx_technicalnote=?", [$this->technoteid]);

@@ -1,5 +1,5 @@
 <?php
-
+/*
   // trate la création d'une fiche technique
 
   // on initialise la class newtechnote -> qui nous peremttra de faire des traitements
@@ -26,3 +26,4 @@
     echo json_encode($newtechnote->state);
 
   }
+*/

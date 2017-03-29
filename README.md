@@ -4,7 +4,7 @@ Cr√©ation d'une petite application web dans le cadre de cours de programation 4√
 
 
 ## V1.4
-Sdate actuel :
+Stade actuel :
 
 Front: **OK**  
 Autolading: **OK**  

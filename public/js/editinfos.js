@@ -53,7 +53,7 @@ $(document).ready(function(){
           pin: $datas.pin,
           bandname: $datas.bandname,
           date: $datas.date,
-          banddescription: $datas.banddescription,
+          banddescription: $datas.banddescription
         },
 
         dataType: "json"

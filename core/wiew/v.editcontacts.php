@@ -1,3 +1,15 @@
+<?php
+
+// on initialise l'objet technote (qui permet d'acceder a toutes les infos d'une fiche tech)
+$technote = new technote($session->getEdit());
+
+// on vérifie que l'utilisateur connecté y a acess
+$technote->verifyUser($session->getUserID());
+
+// recupere les infos pour le header
+$header = $technote->getContacts();
+
+?>
     <div class="container">
 
       <div class="row top-40">
@@ -17,7 +29,6 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th>#</th>
                 <th>Nom</th>
                 <th>Fonction</th>
                 <th>E-mail</th>
@@ -26,14 +37,22 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Jean edouard</td>
-                <td>Ingénieur facade</td>
-                <td>jean@events.com</td>
-                <td>0793234556</td>
-                <td><a href="#">LINK</a></td>
-              </tr>
+              <?php
+                if (!empty($header["contacts"])) {
+
+                  foreach ($header["contacts"] as $key => $value) {
+                    ?>
+                    <tr>
+                      <td><?= $value->name ?></td>
+                      <td><?= $value->function ?></td>
+                      <td><?= $value->email ?></td>
+                      <td><?= $value->phone ?></td>
+                      <td><a href="<?= $value->website ?>"><?= $value->website ?></a></td>
+                    </tr>
+                    <?php
+                  }
+                }
+              ?>
             </tbody>
           </table>
         </div>
@@ -42,6 +61,12 @@
       <div class="row">
         <div class="col-12">
           <h3>Nouveau contact</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="errors" class="col-12">
+
         </div>
       </div>
 
@@ -76,8 +101,8 @@
       <div class="row top-40">
 
         <div class="col-12 text-right">
-          <button type="button" name="clear" class="btn btn-warning btn-lg">Vider</button>
-          <button type="button" name="send" class="btn btn-primary btn-lg">Ajouter ce contact</button>
+          <a class="btn btn-warning btn-lg" href="edit">Revenir</a>
+          <button type="button" id="submit" class="btn btn-primary btn-lg">Ajouter ce contact</button>
         </div>
 
       </div>
