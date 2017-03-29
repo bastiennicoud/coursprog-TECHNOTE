@@ -63,8 +63,6 @@ $(document).ready(function(){
       // si la requete réussi
     }).done(function(datas){
 
-      console.log("AJAX OK");
-/*
       // ici je gere les erreurs, pour afficher a l'utilisateur ce qui fonctionne ou non
       $template = "";
       $.each(datas.errors, function(key , val){
@@ -74,30 +72,66 @@ $(document).ready(function(){
       // affiche les erreurs si il y en a
       if (datas.errors.length == 0) {
         $("#errors").empty();
-        $("#success").html('<p>Connexion ok</p>');
-        document.location.href="dashboard";
+        document.location.href="edit";
       } else {
         $("#errors").empty();
         $("#errors").html('<div class="alert alert-warning">' + $template + '</div>');
       }
 
       // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
-      if (datas.success.username == true) {
-        $("[name=username]").parent().parent().removeClass("has-danger");
-        $("[name=username]").parent().parent().addClass("has-success");
+      if (datas.success.name == true) {
+        $("[name=name]").parent().removeClass("has-danger");
+        $("[name=name]").parent().addClass("has-success");
       } else {
-        $("[name=username]").parent().parent().removeClass("has-success");
-        $("[name=username]").parent().parent().addClass("has-danger");
+        $("[name=name]").parent().removeClass("has-success");
+        $("[name=name]").parent().addClass("has-danger");
       }
 
-      if (datas.success.password == true) {
-        $("[name=password]").parent().parent().removeClass("has-danger");
-        $("[name=password]").parent().parent().addClass("has-success");
+      // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
+      if (datas.success.techdescription == true) {
+        $("[name=techdescription]").parent().removeClass("has-danger");
+        $("[name=techdescription]").parent().addClass("has-success");
       } else {
-        $("[name=password]").parent().parent().removeClass("has-success");
-        $("[name=password]").parent().parent().addClass("has-danger");
+        $("[name=techdescription]").parent().removeClass("has-success");
+        $("[name=techdescription]").parent().addClass("has-danger");
       }
-*/
+
+      // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
+      if (datas.success.pin == true) {
+        $("[name=pin]").parent().removeClass("has-danger");
+        $("[name=pin]").parent().addClass("has-success");
+      } else {
+        $("[name=pin]").parent().removeClass("has-success");
+        $("[name=pin]").parent().addClass("has-danger");
+      }
+
+      // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
+      if (datas.success.bandname == true) {
+        $("[name=bandname]").parent().removeClass("has-danger");
+        $("[name=bandname]").parent().addClass("has-success");
+      } else {
+        $("[name=bandname]").parent().removeClass("has-success");
+        $("[name=bandname]").parent().addClass("has-danger");
+      }
+
+      // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
+      if (datas.success.date == true) {
+        $("[name=date]").parent().removeClass("has-danger");
+        $("[name=date]").parent().addClass("has-success");
+      } else {
+        $("[name=date]").parent().removeClass("has-success");
+        $("[name=date]").parent().addClass("has-danger");
+      }
+
+      // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
+      if (datas.success.banddescription == true) {
+        $("[name=banddescription]").parent().removeClass("has-danger");
+        $("[name=banddescription]").parent().addClass("has-success");
+      } else {
+        $("[name=banddescription]").parent().removeClass("has-success");
+        $("[name=banddescription]").parent().addClass("has-danger");
+      }
+
       // si la requete echoue
     }).fail(function(jqXHR, status) {
 

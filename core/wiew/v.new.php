@@ -7,6 +7,12 @@
       </div>
 
       <div class="row">
+        <div id="errors" class="col-12">
+
+        </div>
+      </div>
+
+      <div class="row">
 
         <div class="col-sm-6 top-40">
           <h3>Informations générales</h3>
