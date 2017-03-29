@@ -113,6 +113,15 @@
 
     }
 
+    // permet d'obtenir juste le nom
+    public function getName(){
+
+      $this->getTechnote();
+
+      return $this->technote["technote"][0]->name;
+
+    }
+
     /**
      * renvoie les infos pour générer un header
      */

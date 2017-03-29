@@ -32,10 +32,10 @@ $(document).ready(function(){
         // on transmet au serveur via POST les données de l'utilisateur
         data: {
           name: $datas.name,
-          techdescription: $datas.email,
-          pin: $datas.web,
-          bandname: $datas.function,
-          date: $datas.phone
+          email: $datas.email,
+          web: $datas.web,
+          function: $datas.function,
+          phone: $datas.phone
         },
 
         dataType: "json"
@@ -68,48 +68,39 @@ $(document).ready(function(){
         }
 
         // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
-        if (datas.success.techdescription == true) {
-          $("[name=techdescription]").parent().removeClass("has-danger");
-          $("[name=techdescription]").parent().addClass("has-success");
+        if (datas.success.email == true) {
+          $("[name=email]").parent().removeClass("has-danger");
+          $("[name=email]").parent().addClass("has-success");
         } else {
-          $("[name=techdescription]").parent().removeClass("has-success");
-          $("[name=techdescription]").parent().addClass("has-danger");
+          $("[name=email]").parent().removeClass("has-success");
+          $("[name=email]").parent().addClass("has-danger");
         }
 
         // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
-        if (datas.success.pin == true) {
-          $("[name=pin]").parent().removeClass("has-danger");
-          $("[name=pin]").parent().addClass("has-success");
+        if (datas.success.web == true) {
+          $("[name=web]").parent().removeClass("has-danger");
+          $("[name=web]").parent().addClass("has-success");
         } else {
-          $("[name=pin]").parent().removeClass("has-success");
-          $("[name=pin]").parent().addClass("has-danger");
+          $("[name=web]").parent().removeClass("has-success");
+          $("[name=web]").parent().addClass("has-danger");
         }
 
         // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
-        if (datas.success.bandname == true) {
-          $("[name=bandname]").parent().removeClass("has-danger");
-          $("[name=bandname]").parent().addClass("has-success");
+        if (datas.success.function == true) {
+          $("[name=function]").parent().removeClass("has-danger");
+          $("[name=function]").parent().addClass("has-success");
         } else {
-          $("[name=bandname]").parent().removeClass("has-success");
-          $("[name=bandname]").parent().addClass("has-danger");
+          $("[name=function]").parent().removeClass("has-success");
+          $("[name=function]").parent().addClass("has-danger");
         }
 
         // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
-        if (datas.success.date == true) {
-          $("[name=date]").parent().removeClass("has-danger");
-          $("[name=date]").parent().addClass("has-success");
+        if (datas.success.phone == true) {
+          $("[name=phone]").parent().removeClass("has-danger");
+          $("[name=phone]").parent().addClass("has-success");
         } else {
-          $("[name=date]").parent().removeClass("has-success");
-          $("[name=date]").parent().addClass("has-danger");
-        }
-
-        // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
-        if (datas.success.banddescription == true) {
-          $("[name=banddescription]").parent().removeClass("has-danger");
-          $("[name=banddescription]").parent().addClass("has-success");
-        } else {
-          $("[name=banddescription]").parent().removeClass("has-success");
-          $("[name=banddescription]").parent().addClass("has-danger");
+          $("[name=phone]").parent().removeClass("has-success");
+          $("[name=phone]").parent().addClass("has-danger");
         }
 
         // si la requete echoue

@@ -1,5 +1,5 @@
 <?php
-/*
+
   // trate la création d'une fiche technique
 
   // on initialise la class newtechnote -> qui nous peremttra de faire des traitements
@@ -8,16 +8,13 @@
   // cette fonction vérifie que les champ ont été remplis
   $newtechnote->verifyContent();
 
-  // methode spécifique pour vérifier que le pin est numérique
-  $newtechnote->verifyPin();
-
   // si le statut de verification est OK
   if ($newtechnote->getState()) {
 
     // ecriture dans la bd
-    $newtechnote->updateInfos($session->getEdit());
+    $newtechnote->addContact($session->getEdit());
 
-    // redirection
+    // renvoie au navigateur
     echo json_encode($newtechnote->state);
 
   } else {
@@ -26,4 +23,3 @@
     echo json_encode($newtechnote->state);
 
   }
-*/

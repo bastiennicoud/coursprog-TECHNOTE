@@ -14,7 +14,7 @@ $header = $technote->getContacts();
 
       <div class="row top-40">
         <div class="col-12">
-          <h1>Editer les contacts <small>Phill Collins</small></h1>
+          <h1>Editer les contacts <small><?= $technote->getName() ?></small></h1>
         </div>
       </div>
 

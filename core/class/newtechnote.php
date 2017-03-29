@@ -116,6 +116,10 @@
 
     }
 
+    /**
+     * Permet de mettre a jour les infos de base d'une fiche tech
+     * @param integer id de la fiche technique a mettre a jour
+     */
     public function updateInfos($id){
 
       $link = "?id=" . $id;
@@ -131,6 +135,28 @@
       $datas = [$this->infos["bandname"], $this->infos["banddescription"], $this->infos["date"], $image, $image, $id];
 
       $data = DB::getDB()->insert($sql, $datas);
+
+    }
+
+    /**
+     * Permet d'ajouter un contact a une fiche technique
+     * @param integer id de la fiche technique en question
+     */
+    public function addContact($id){
+
+      //if(empty(DB::getDB()->prepare("SELECT * FROM TN_contacts WHERE idx_technicalnote=?", [$id]))) {
+
+        $data = DB::getDB()->insert("INSERT INTO TN_contacts (idx_technicalnote, name, email, phone, website, function)
+                VALUES (?, ?, ?, ?, ?, ?);",
+                [$id, $this->infos["name"], $this->infos["email"], $this->infos["phone"], $this->infos["web"], $this->infos["function"]]);
+
+      //} else {
+
+        //$data = DB::getDB()->insert("UPDATE TN_contacts idx_technicalnote = ?, name = ?, email = ?, phone = ?, website = ?, function = ?
+        //        VALUES (?, ?, ?, ?, ?, ?);",
+        //        [$id, $this->infos["name"], $this->infos["email"], $this->infos["phone"], $this->infos["website"], $this->infos["function"]]);
+
+      //}
 
     }
 
