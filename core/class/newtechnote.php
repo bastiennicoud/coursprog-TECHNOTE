@@ -144,19 +144,22 @@
      */
     public function addContact($id){
 
-      //if(empty(DB::getDB()->prepare("SELECT * FROM TN_contacts WHERE idx_technicalnote=?", [$id]))) {
+      $data = DB::getDB()->insert("INSERT INTO TN_contacts (idx_technicalnote, name, email, phone, website, function)
+              VALUES (?, ?, ?, ?, ?, ?);",
+              [$id, $this->infos["name"], $this->infos["email"], $this->infos["phone"], $this->infos["web"], $this->infos["function"]]);
 
-        $data = DB::getDB()->insert("INSERT INTO TN_contacts (idx_technicalnote, name, email, phone, website, function)
-                VALUES (?, ?, ?, ?, ?, ?);",
-                [$id, $this->infos["name"], $this->infos["email"], $this->infos["phone"], $this->infos["web"], $this->infos["function"]]);
+    }
 
-      //} else {
+    /**
+     * Permet d'ajouter un commetaire a la fiche technique
+     * @param integer id de la fiche technique en question
+     */
+    public function addComment($id){
 
-        //$data = DB::getDB()->insert("UPDATE TN_contacts idx_technicalnote = ?, name = ?, email = ?, phone = ?, website = ?, function = ?
-        //        VALUES (?, ?, ?, ?, ?, ?);",
-        //        [$id, $this->infos["name"], $this->infos["email"], $this->infos["phone"], $this->infos["website"], $this->infos["function"]]);
+      $data = DB::getDB()->insert("INSERT INTO TN_comments (idx_technicalnote, title, head, commentar)
+              VALUES (?, ?, ?, ?);",
+              [$id, $this->infos["title"], $this->infos["head"], $this->infos["comment"]]);
 
-      //}
 
     }
 
