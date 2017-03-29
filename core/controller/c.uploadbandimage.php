@@ -28,7 +28,7 @@
   $imagename = $name . "." . $uploadedformat;
 
   // emplacement
-  $imagedirectory = "img/plan/" . $imagename;
+  $imagedirectory = "img/cover/" . $imagename;
 
   // je deplace le ficher dans le dossier voulu a ce effet
   $imgmove = move_uploaded_file($_FILES['image']['tmp_name'], $imagedirectory);

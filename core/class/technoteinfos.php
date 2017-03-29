@@ -78,7 +78,7 @@
       $data = DB::getDB()->prepare("SELECT name FROM TN_technicalnotes WHERE id_technicalnote=?", [$id]);
 
       return $data[0]->name;
-      
+
     }
 
   }

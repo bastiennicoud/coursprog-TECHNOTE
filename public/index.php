@@ -64,5 +64,11 @@
   // script pour suvegarder l'image
   $router->post('/uploadstageplan', function(){ WIEW::getCtrl("uploadstageplan", true); });
 
+  // script pour suvegarder l'image
+  $router->post('/uploadbandimage', function(){ WIEW::getCtrl("uploadbandimage", true); });
+
+  // route lorsque lon demande la page d'edition
+  $router->get('/editinfos', function(){ WIEW::getwiew("editinfos", true, true); });
+
   // lance la verification de la route
   $router->run();
