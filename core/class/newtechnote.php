@@ -103,8 +103,8 @@
 
       $data = DB::getDB()->insert($sql, $datas);
 
-      $image = trim($this->infos["name"]) . ".jpg";
       $this->lastid = DB::getDB()->lastId();
+      $image = $this->lastid . str_replace(' ','',$this->infos["bandname"]) . ".jpg";
       $link = "?id=" . $this->lastid;
 
       $sql = "INSERT INTO TN_informations (idx_technicalnote, band, descriptio, date, image, stageplan)
@@ -113,6 +113,24 @@
 
       $data = DB::getDB()->insert($sql, $datas);
       $data = DB::getDB()->insert("UPDATE TN_technicalnotes SET linkhash = ? WHERE id_technicalnote=?;", [$link, $this->lastid]);
+
+    }
+
+    public function updateInfos($id){
+
+      $link = "?id=" . $id;
+
+      $sql = "UPDATE TN_technicalnotes SET idx_user = ?, name = ?, lastedit = NOW(), description = ?, pincode = ?, linkhash = ?, public = 1 WHERE id_technicalnote = ?";
+      $datas = [$this->user, $this->infos["name"], $this->infos["techdescription"],  $this->infos["pin"], $link, $id];
+
+      $data = DB::getDB()->insert($sql, $datas);
+
+      $image = $id . str_replace(' ','',$this->infos["bandname"]) . ".jpg";
+
+      $sql = "UPDATE TN_informations SET band = ?, descriptio = ?, date = ?, image = ?, stageplan = ? WHERE idx_technicalnote = ?";
+      $datas = [$this->infos["bandname"], $this->infos["banddescription"], $this->infos["date"], $image, $image, $id];
+
+      $data = DB::getDB()->insert($sql, $datas);
 
     }
 
