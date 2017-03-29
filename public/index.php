@@ -49,17 +49,20 @@
   // route lorsque lon demande a acceder a une fiche technique -> verifie le pin et affiche la fiche
   $router->post('/technote', function(){ WIEW::getwiew("technote", false, false); });
 
-  // route lorsque lon demande la page de tableau de bord
+  // route lorsque lon demande la page pour ajouter une nouvelle fiche tech
   $router->get('/new', function(){ WIEW::getwiew("new", true, true); });
 
-  // route lorsque lon demande la page de tableau de bord
+  // route lorsque lon soummet les infos pour la création d'une nouvelle fiche tech
   $router->post('/new', function(){ WIEW::getCtrl("new", true); });
 
-  // route lorsque lon demande la page de tableau de bord
+  // permet juste de definir la fiche technique qui est actuellement en cours d'édition
   $router->get('/setedit', function(){ WIEW::getCtrl("setedit", true); });
 
-  // route lorsque lon demande la page de tableau de bord
+  // route lorsque lon demande la page d'edition
   $router->get('/edit', function(){ WIEW::getwiew("edit", true, true); });
+
+  // script pour suvegarder l'image
+  $router->post('/uploadstageplan', function(){ WIEW::getCtrl("uploadstageplan", true); });
 
   // lance la verification de la route
   $router->run();
