@@ -42,7 +42,7 @@
           </div>
           <br>
           <div class="form-group">
-            <textarea class="form-control" name="description" rows="3" placeholder="Descriptif du style du groupe."></textarea>
+            <textarea class="form-control" name="banddescription" rows="3" placeholder="Descriptif du style du groupe."></textarea>
           </div>
           <br>
           <div class="form-group">

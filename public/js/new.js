@@ -40,7 +40,7 @@ $(document).ready(function(){
     $datas.pin = $("[name=pin]").val();
     $datas.bandname = $("[name=bandname]").val();
     $datas.date = $("[name=date]").val();
-    $datas.description = $("[name=description]").val();
+    $datas.banddescription = $("[name=banddescription]").val();
 
     // requete ajax
     $.ajax({
@@ -55,7 +55,7 @@ $(document).ready(function(){
         pin: $datas.pin,
         bandname: $datas.bandname,
         date: $datas.date,
-        description: $datas.description,
+        banddescription: $datas.banddescription,
       },
 
       dataType: "json"
