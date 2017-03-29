@@ -96,4 +96,13 @@
       return true;
 
     }
+
+    /**
+     * requete pour obtenir le dernier id inseré
+     */
+    public function lastID(){
+
+      return $this->getPDO()->lastInsertId();
+
+    }
   }
