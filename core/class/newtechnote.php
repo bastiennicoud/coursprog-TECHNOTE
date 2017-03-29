@@ -103,8 +103,8 @@
 
       $data = DB::getDB()->insert($sql, $datas);
 
-      $image = trim($this->infos["name"]) . ".jpg";
       $this->lastid = DB::getDB()->lastId();
+      $image = $this->lastid . str_replace(' ','',$this->infos["bandname"]) . ".jpg";
       $link = "?id=" . $this->lastid;
 
       $sql = "INSERT INTO TN_informations (idx_technicalnote, band, descriptio, date, image, stageplan)
@@ -125,7 +125,7 @@
 
       $data = DB::getDB()->insert($sql, $datas);
 
-      $image = $id . trim($this->infos["name"]) . ".jpg";
+      $image = $id . str_replace(' ','',$this->infos["bandname"]) . ".jpg";
 
       $sql = "UPDATE TN_informations SET band = ?, descriptio = ?, date = ?, image = ?, stageplan = ? WHERE idx_technicalnote = ?";
       $datas = [$this->infos["bandname"], $this->infos["banddescription"], $this->infos["date"], $image, $image, $id];

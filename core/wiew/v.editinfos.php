@@ -70,7 +70,7 @@
       <div class="row top-40">
 
         <div class="col-12 text-right">
-          <a class="btn btn-warning btn-lg" href="edit">Annuler</a>
+          <a class="btn btn-warning btn-lg" href="edit">Revenir</a>
           <button type="button" id="submit" class="btn btn-primary btn-lg">Modifier la fiche</button>
         </div>
 
