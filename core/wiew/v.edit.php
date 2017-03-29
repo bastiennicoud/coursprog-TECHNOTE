@@ -1,3 +1,7 @@
+<?php
+  $infos = new technoteinfos($session->getUser(), $session->getUserID());
+?>
+
     <div class="container">
 
       <div class="row top-40">
@@ -8,7 +12,7 @@
 
       <div class="row">
         <div class="col-12">
-          <h3>Phill Collins</h3>
+          <h3><?= $infos->getTechName($session->getEdit()) ?></h3>
         </div>
       </div>
 
@@ -45,10 +49,16 @@
             <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
             <small id="fileHelp" class="form-text text-muted">Cette image renseigne sur la position des musiciens et du matériel sur scène</small>
           </div>
+          <div class="col-3">
+            <button class="btn btn-info">Uploader</button>
+          </div>
           <div class="form-group">
             <label for="exampleInputFile">Image du groupe</label>
             <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
             <small id="fileHelp" class="form-text text-muted">Choisisez une image pour illustrer votre fiche technique.</small>
+          </div>
+          <div class="col-3">
+            <button class="btn btn-info">Uploader</button>
           </div>
         </div>
       </div>

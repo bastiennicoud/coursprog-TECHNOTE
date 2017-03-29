@@ -56,6 +56,9 @@
   $router->post('/new', function(){ WIEW::getCtrl("new", true); });
 
   // route lorsque lon demande la page de tableau de bord
+  $router->get('/setedit', function(){ WIEW::getCtrl("setedit", true); });
+
+  // route lorsque lon demande la page de tableau de bord
   $router->get('/edit', function(){ WIEW::getwiew("edit", true, true); });
 
   // lance la verification de la route

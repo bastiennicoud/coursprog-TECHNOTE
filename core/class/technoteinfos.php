@@ -52,7 +52,7 @@
               <h4 class='card-title'>" . $value->name . "</h4>
               <p class='card-text'>" . $value->description . "</p>
               <p class='card-text'>Code pin <span class='badge badge-default'>" . $value->pincode . "</span></p>
-              <p class='card-text'>Lien de partage : <a href='bnicoud.eleves.mediamatique.ch/technote/public/" . $value->linkhash . "' class='card-link'>link</a></p>
+              <p class='card-text'>Lien de partage : <a href='bnicoud.eleves.mediamatique.ch/technote/public/technote" . $value->linkhash . "' class='card-link'>link</a></p>
               <p class='card-text'><small class='text-muted'>Derniere mise a jour " . $value->lastedit . "</small></p>
             </div>
 
@@ -61,7 +61,7 @@
             </div>
 
             <div class='card-footer'>
-              <a href='edit/" . $value->id_technicalnote . "' class='btn btn-primary'>Editer</a>
+              <a href='setedit?id=" . $value->id_technicalnote . "' class='btn btn-primary'>Editer</a>
               <a href='delete/" . $value->id_technicalnote . "' class='btn btn-danger'>Supprimer</a>
             </div>
           </div>
@@ -71,6 +71,14 @@
 
       return $template;
 
+    }
+
+    public function getTechName($id) {
+
+      $data = DB::getDB()->prepare("SELECT name FROM TN_technicalnotes WHERE id_technicalnote=?", [$id]);
+
+      return $data[0]->name;
+      
     }
 
   }
