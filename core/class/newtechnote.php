@@ -116,8 +116,22 @@
 
     }
 
-    public function updateInfos(){
-      
+    public function updateInfos($id){
+
+      $link = "?id=" . $id;
+
+      $sql = "UPDATE TN_technicalnotes SET idx_user = ?, name = ?, lastedit = NOW(), description = ?, pincode = ?, linkhash = ?, public = 1 WHERE id_technicalnote = ?";
+      $datas = [$this->user, $this->infos["name"], $this->infos["techdescription"],  $this->infos["pin"], $link, $id];
+
+      $data = DB::getDB()->insert($sql, $datas);
+
+      $image = $id . trim($this->infos["name"]) . ".jpg";
+
+      $sql = "UPDATE TN_informations SET band = ?, descriptio = ?, date = ?, image = ?, stageplan = ? WHERE idx_technicalnote = ?";
+      $datas = [$this->infos["bandname"], $this->infos["banddescription"], $this->infos["date"], $image, $image, $id];
+
+      $data = DB::getDB()->insert($sql, $datas);
+
     }
 
   }

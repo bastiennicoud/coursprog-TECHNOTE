@@ -15,7 +15,7 @@
   if ($newtechnote->getState()) {
 
     // ecriture dans la bd
-    $newtechnote->updateInfos();
+    $newtechnote->updateInfos($session->getEdit());
 
     // redirection
     echo json_encode($newtechnote->state);
