@@ -163,4 +163,16 @@
 
     }
 
+    /**
+     * Permet d'ajouter une piste au patch de la fiche tech
+     * @param integer id de la fiche technique en question
+     */
+    public function addPatch($id){
+
+      $data = DB::getDB()->insert("INSERT INTO TN_patchlists (idx_technicalnote, input, instrument, microphone, fx, monitormix)
+              VALUES (?, ?, ?, ?, ?, ?);",
+              [$id, $this->infos["channel"], $this->infos["instrument"], $this->infos["mic"], $this->infos["fx"], $this->infos["monmix"]]);
+
+    }
+
   }

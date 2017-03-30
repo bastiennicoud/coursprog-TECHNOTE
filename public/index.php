@@ -89,5 +89,12 @@
   $router->post('/editcomments', function(){ WIEW::getCtrl("editcomments", true); });
 
 
+  // route lorsque lon demande la page d'edition des commentaires
+  $router->get('/editpatch', function(){ WIEW::getwiew("editpatch", true, true); });
+
+  // route lorsque lon soummet les nouveau commentaires
+  $router->post('/editpatch', function(){ WIEW::getCtrl("editpatch", true); });
+
+
   // lance la verification de la route
   $router->run();
