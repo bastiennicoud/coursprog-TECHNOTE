@@ -17,7 +17,6 @@
 
     <!-- Header de la page -->
     <div id="tech-background" style="background-image: url(img/cover/<?= $header["image"] ?>);">
-      <a href="dashboard">Retour au tableau de bord</a>
       <div class="container centred">
         <div class="row">
           <h2 class="text-center max-width fff">Fiche technique</h2>
