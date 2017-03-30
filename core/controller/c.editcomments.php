@@ -12,7 +12,7 @@
   if ($newtechnote->getState()) {
 
     // ecriture dans la bd
-    $newtechnote->addContact($session->getEdit());
+    $newtechnote->addComment($session->getEdit());
 
     // renvoie au navigateur
     echo json_encode($newtechnote->state);

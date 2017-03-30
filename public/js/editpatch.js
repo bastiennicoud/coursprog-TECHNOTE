@@ -3,11 +3,11 @@ $(document).ready(function(){
 
     // declaration d'un objet pour stoquer les donées du formulaire
     var $datas = {
-      name: "",
-      email: "",
-      web: "",
-      function: "",
-      phone: ""
+      channel: "",
+      instrument: "",
+      mic: "",
+      fx: "",
+      monmix: ""
     };
 
     // variable utilisee pour stoquer le template html
@@ -17,25 +17,25 @@ $(document).ready(function(){
     $("#submit").on("click", function(){
 
       // recuperation des differents champs
-      $datas.name = $("[name=name]").val();
-      $datas.email = $("[name=email]").val();
-      $datas.web = $("[name=web]").val();
-      $datas.function = $("[name=function]").val();
-      $datas.phone = $("[name=phone]").val();
+      $datas.channel = $("[name=channel]").val();
+      $datas.instrument = $("[name=instrument]").val();
+      $datas.mic = $("[name=mic]").val();
+      $datas.fx = $("[name=fx]").val();
+      $datas.monmix = $("[name=monmix]").val();
 
       // requete ajax
       $.ajax({
 
         method: "POST",
-        url: "editcontacts",
+        url: "editpatch",
 
         // on transmet au serveur via POST les données de l'utilisateur
         data: {
-          name: $datas.name,
-          email: $datas.email,
-          web: $datas.web,
-          function: $datas.function,
-          phone: $datas.phone
+          channel: $datas.channel,
+          instrument: $datas.instrument,
+          mic: $datas.mic,
+          fx: $datas.fx,
+          monmix: $datas.monmix
         },
 
         dataType: "json"
@@ -59,48 +59,48 @@ $(document).ready(function(){
         }
 
         // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
-        if (datas.success.name == true) {
-          $("[name=name]").parent().removeClass("has-danger");
-          $("[name=name]").parent().addClass("has-success");
+        if (datas.success.channel == true) {
+          $("[name=channel]").parent().removeClass("has-danger");
+          $("[name=channel]").parent().addClass("has-success");
         } else {
-          $("[name=name]").parent().removeClass("has-success");
-          $("[name=name]").parent().addClass("has-danger");
+          $("[name=channel]").parent().removeClass("has-success");
+          $("[name=channel]").parent().addClass("has-danger");
         }
 
         // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
-        if (datas.success.email == true) {
-          $("[name=email]").parent().removeClass("has-danger");
-          $("[name=email]").parent().addClass("has-success");
+        if (datas.success.instrument == true) {
+          $("[name=instrument]").parent().removeClass("has-danger");
+          $("[name=instrument]").parent().addClass("has-success");
         } else {
-          $("[name=email]").parent().removeClass("has-success");
-          $("[name=email]").parent().addClass("has-danger");
+          $("[name=instrument]").parent().removeClass("has-success");
+          $("[name=instrument]").parent().addClass("has-danger");
         }
 
         // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
-        if (datas.success.web == true) {
-          $("[name=web]").parent().removeClass("has-danger");
-          $("[name=web]").parent().addClass("has-success");
+        if (datas.success.mic == true) {
+          $("[name=mic]").parent().removeClass("has-danger");
+          $("[name=mic]").parent().addClass("has-success");
         } else {
-          $("[name=web]").parent().removeClass("has-success");
-          $("[name=web]").parent().addClass("has-danger");
+          $("[name=mic]").parent().removeClass("has-success");
+          $("[name=mic]").parent().addClass("has-danger");
         }
 
         // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
-        if (datas.success.function == true) {
-          $("[name=function]").parent().removeClass("has-danger");
-          $("[name=function]").parent().addClass("has-success");
+        if (datas.success.fx == true) {
+          $("[name=fx]").parent().removeClass("has-danger");
+          $("[name=fx]").parent().addClass("has-success");
         } else {
-          $("[name=function]").parent().removeClass("has-success");
-          $("[name=function]").parent().addClass("has-danger");
+          $("[name=fx]").parent().removeClass("has-success");
+          $("[name=fx]").parent().addClass("has-danger");
         }
 
         // ici je gere les sccess, pour afficher les chaps justes et le message de validation si l'inscription est réussie
-        if (datas.success.phone == true) {
-          $("[name=phone]").parent().removeClass("has-danger");
-          $("[name=phone]").parent().addClass("has-success");
+        if (datas.success.monmix == true) {
+          $("[name=monmix]").parent().removeClass("has-danger");
+          $("[name=monmix]").parent().addClass("has-success");
         } else {
-          $("[name=phone]").parent().removeClass("has-success");
-          $("[name=phone]").parent().addClass("has-danger");
+          $("[name=monmix]").parent().removeClass("has-success");
+          $("[name=monmix]").parent().addClass("has-danger");
         }
 
         // si la requete echoue

@@ -68,18 +68,40 @@
   $router->post('/uploadbandimage', function(){ WIEW::getCtrl("uploadbandimage", true); });
 
 
-  // route lorsque lon demande la page d'edition
+  // route lorsque lon demande la page d'edition des infos
   $router->get('/editinfos', function(){ WIEW::getwiew("editinfos", true, true); });
 
-  // route lorsque lon soummet les infos pour la création d'une nouvelle fiche tech
+  // route lorsque lon soummet les infos editées
   $router->post('/editinfos', function(){ WIEW::getCtrl("editinfos", true); });
 
 
-  // route lorsque lon demande la page d'edition
+  // route lorsque lon demande la page d'edition des contacts
   $router->get('/editcontacts', function(){ WIEW::getwiew("editcontacts", true, true); });
 
-  // route lorsque lon soummet les infos pour la création d'une nouvelle fiche tech
+  // route lorsque lon soummet les nouveau contacts
   $router->post('/editcontacts', function(){ WIEW::getCtrl("editcontacts", true); });
+
+
+  // route lorsque lon demande la page d'edition des commentaires
+  $router->get('/editcomments', function(){ WIEW::getwiew("editcomments", true, true); });
+
+  // route lorsque lon soummet les nouveau commentaires
+  $router->post('/editcomments', function(){ WIEW::getCtrl("editcomments", true); });
+
+
+  // route lorsque lon demande la page d'edition des commentaires
+  $router->get('/editpatch', function(){ WIEW::getwiew("editpatch", true, true); });
+
+  // route lorsque lon soummet les nouveau commentaires
+  $router->post('/editpatch', function(){ WIEW::getCtrl("editpatch", true); });
+
+
+  // route lorsque lon demande la page d'edition des commentaires
+  $router->get('/editzicos', function(){ WIEW::getwiew("editzicos", true, true); });
+
+  // route lorsque lon soummet les nouveau commentaires
+  $router->post('/editzicos', function(){ WIEW::getCtrl("editzicos", true); });
+
 
   // lance la verification de la route
   $router->run();

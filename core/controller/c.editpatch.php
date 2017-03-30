@@ -7,12 +7,12 @@
 
   // cette fonction vérifie que les champ ont été remplis
   $newtechnote->verifyContent();
-
+  
   // si le statut de verification est OK
   if ($newtechnote->getState()) {
 
     // ecriture dans la bd
-    $newtechnote->addContact($session->getEdit());
+    $newtechnote->addPatch($session->getEdit());
 
     // renvoie au navigateur
     echo json_encode($newtechnote->state);
