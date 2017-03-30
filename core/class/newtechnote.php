@@ -175,4 +175,16 @@
 
     }
 
+    /**
+     * Permet d'ajouter une piste au patch de la fiche tech
+     * @param integer id de la fiche technique en question
+     */
+    public function addZicos($id){
+
+      $data = DB::getDB()->insert("INSERT INTO TN_musicians (idx_technicalnote, name, instrument)
+              VALUES (?, ?, ?);",
+              [$id, $this->infos["name"], $this->infos["instrument"]]);
+
+    }
+
   }

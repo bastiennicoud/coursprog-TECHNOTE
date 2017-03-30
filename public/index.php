@@ -96,5 +96,12 @@
   $router->post('/editpatch', function(){ WIEW::getCtrl("editpatch", true); });
 
 
+  // route lorsque lon demande la page d'edition des commentaires
+  $router->get('/editzicos', function(){ WIEW::getwiew("editzicos", true, true); });
+
+  // route lorsque lon soummet les nouveau commentaires
+  $router->post('/editzicos', function(){ WIEW::getCtrl("editzicos", true); });
+
+
   // lance la verification de la route
   $router->run();
