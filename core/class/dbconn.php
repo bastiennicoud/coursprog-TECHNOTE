@@ -98,6 +98,19 @@
     }
 
     /**
+     * requete d'insertions dans la bd
+     * @param string requete sql
+     * @param array valeurs a lier lors du bind param
+     */
+    public function delete($request, $values){
+
+      $stmt = $this->getPDO()->prepare($request);
+      $stmt->execute($values);
+      return true;
+
+    }
+
+    /**
      * requete pour obtenir le dernier id inseré
      */
     public function lastID(){

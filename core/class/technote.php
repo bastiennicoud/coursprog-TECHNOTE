@@ -211,4 +211,15 @@
 
     }
 
+    /**
+     * Pour supprimer une fiche technique
+     */
+    public function delete(){
+
+      $id = $this->technoteid;
+
+      $data = DB::getDB()->delete("SELECT", [1, 2]);
+
+    }
+
   }
