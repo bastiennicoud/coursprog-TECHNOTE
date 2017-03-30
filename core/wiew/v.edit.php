@@ -28,9 +28,6 @@
         <div class="col-6">
           <a href="editcomments" class="btn btn-info">Editer les commentaires</a>
         </div>
-        <div class="col-6">
-          <a href="#" class="btn btn-info">Ajouter un plan de scene</a>
-        </div>
       </div>
       <div class="row top-10">
         <div class="col-6">
@@ -42,9 +39,9 @@
       </div>
 
       <div class="row top-40">
-        <div class="col-12">
-          <h3>Ajout du plan de scene</h3>
+        <div class="col-sm-6">
 
+          <h3>Ajout du plan de scene</h3>
           <div id="stageplanerrors">
 
           </div>
@@ -55,6 +52,9 @@
             <small id="fileHelp1" class="form-text text-muted">Cette image renseigne sur la position des musiciens et du matériel sur scène</small>
             <button class="btn btn-info" type="submit">Upload</button>
           </form>
+
+        </div>
+        <div class="col-sm-6">
 
           <h3>Ajout d'une image de groupe</h3>
           <div id="bandimageerrors">

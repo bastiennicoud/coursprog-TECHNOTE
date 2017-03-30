@@ -116,6 +116,10 @@
 
     }
 
+    /**
+     * Permet de mettre a jour les infos de base d'une fiche tech
+     * @param integer id de la fiche technique a mettre a jour
+     */
     public function updateInfos($id){
 
       $link = "?id=" . $id;
@@ -131,6 +135,55 @@
       $datas = [$this->infos["bandname"], $this->infos["banddescription"], $this->infos["date"], $image, $image, $id];
 
       $data = DB::getDB()->insert($sql, $datas);
+
+    }
+
+    /**
+     * Permet d'ajouter un contact a une fiche technique
+     * @param integer id de la fiche technique en question
+     */
+    public function addContact($id){
+
+      $data = DB::getDB()->insert("INSERT INTO TN_contacts (idx_technicalnote, name, email, phone, website, function)
+              VALUES (?, ?, ?, ?, ?, ?);",
+              [$id, $this->infos["name"], $this->infos["email"], $this->infos["phone"], $this->infos["web"], $this->infos["function"]]);
+
+    }
+
+    /**
+     * Permet d'ajouter un commetaire a la fiche technique
+     * @param integer id de la fiche technique en question
+     */
+    public function addComment($id){
+
+      $data = DB::getDB()->insert("INSERT INTO TN_comments (idx_technicalnote, title, head, commentar)
+              VALUES (?, ?, ?, ?);",
+              [$id, $this->infos["title"], $this->infos["head"], $this->infos["comment"]]);
+
+
+    }
+
+    /**
+     * Permet d'ajouter une piste au patch de la fiche tech
+     * @param integer id de la fiche technique en question
+     */
+    public function addPatch($id){
+
+      $data = DB::getDB()->insert("INSERT INTO TN_patchlists (idx_technicalnote, input, instrument, microphone, fx, monitormix)
+              VALUES (?, ?, ?, ?, ?, ?);",
+              [$id, $this->infos["channel"], $this->infos["instrument"], $this->infos["mic"], $this->infos["fx"], $this->infos["monmix"]]);
+
+    }
+
+    /**
+     * Permet d'ajouter une piste au patch de la fiche tech
+     * @param integer id de la fiche technique en question
+     */
+    public function addZicos($id){
+
+      $data = DB::getDB()->insert("INSERT INTO TN_musicians (idx_technicalnote, name, instrument)
+              VALUES (?, ?, ?);",
+              [$id, $this->infos["name"], $this->infos["instrument"]]);
 
     }
 
