@@ -72,7 +72,7 @@ $(document).ready(function(){
       // affiche les erreurs si il y en a
       if (datas.errors.length == 0) {
         $("#errors").empty();
-        document.location.href="edit";
+        document.location.href="dashboard";
       } else {
         $("#errors").empty();
         $("#errors").html('<div class="alert alert-warning">' + $template + '</div>');

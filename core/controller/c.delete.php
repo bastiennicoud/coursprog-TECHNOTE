@@ -7,3 +7,5 @@
   $technote->verifyUser($session->getUserID());
 
   $technote->delete();
+
+  header("Location: dashboard");
