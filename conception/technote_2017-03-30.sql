@@ -7,7 +7,7 @@
 #
 # Hôte: 127.0.0.1 (MySQL 5.7.17)
 # Base de données: technote
-# Temps de génération: 2017-03-30 09:57:51 +0000
+# Temps de génération: 2017-03-30 11:44:41 +0000
 # ************************************************************
 
 
@@ -106,7 +106,7 @@ VALUES
 	(1,1,'Pink Floyd','Pink Floyd est un groupe de rock progressif et psychédélique britannique formé en 1965 à Londres. Il est considéré comme un pionnier et un représentant majeur de ces styles musicaux.','2005-03-20 17:00:00','1pinkfloyd.jpg','1pinkfloyd.jpg'),
 	(2,2,'Toto','Toto est un groupe de rock américain créé en 1976 par Jeff Porcaro.','2006-06-30 00:00:00','2toto.jpg','2toto.jpg'),
 	(16,21,'Daft Punk','Daft Punk est un groupe français de musique électronique originaire de Paris, composé de Thomas Bangalter et Guy-Manuel de Homem-Christo. Actif depuis 1993, le groupe participe à la création et à la démocratisation du mouvement de musique électronique baptisé french touch. Ils font partie des artistes français s\'exportant le mieux à l\'étranger, et ce depuis la sortie de leur premier véritable succès, Da Funk en 1996. Une des originalités des Daft Punk est la culture de leur notoriété d\'artistes indépendants et sans visage, portant toujours en public des casques et des costumes. Ils s\'inspirent du film Phantom of the Paradise de Brian De Palma.','2017-03-22 00:00:00','21DaftPunk.jpg','21DaftPunk.jpg'),
-	(17,23,'test','test','2017-03-15 00:00:00','23test.jpg','23test.jpg');
+	(18,24,'Thousand Foot Krutch','housand Foot Krutch, aussi abrégé TFK, est un groupe de rock chrétien et nu metal canadien, originaire de Peterborough, en Ontario. Ils comptent actuellement huit albums, ainsi qu\'un album live, et trois albums remixes. Le chanteur Trevor McNevan et le batteur Steve Augustine sont également membres d\'un projet appelé FM Static.','2017-03-30 00:00:00','24ThousandFootKrutch.jpg','24ThousandFootKrutch.jpg');
 
 /*!40000 ALTER TABLE `TN_informations` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -215,7 +215,7 @@ VALUES
 	(1,5,'Pink Floyd','Fiche technique globale du groupe, informations générales pour les plateaux classiques.','2017-03-20 17:00:00',5643,'?id=1',1),
 	(2,5,'Toto','Informations pours les technicient et responsables des salles visitées.','2017-03-22 17:00:00',7788,'?id=2',1),
 	(21,5,'Daft Punk (simple)','Fiche technique pour les concerts de moyenne envergure, 2 sur scene.','2017-03-29 18:37:22',4321,'?id=21',1),
-	(23,5,'test','test','2017-03-30 11:36:14',1234,'?id=23',1);
+	(24,5,'TFK test','Fiche technique généraliste du groupe.','2017-03-30 12:08:30',7890,'?id=24',1);
 
 /*!40000 ALTER TABLE `TN_technicalnotes` ENABLE KEYS */;
 UNLOCK TABLES;
