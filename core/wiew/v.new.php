@@ -44,7 +44,7 @@
           </div>
           <br>
           <div class="form-group">
-            <input type="date" name="date" class="form-control">
+            <input type="date" name="date" class="form-control" placeholder="Une date">
           </div>
           <br>
           <div class="form-group">

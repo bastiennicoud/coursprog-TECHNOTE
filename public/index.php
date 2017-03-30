@@ -103,5 +103,9 @@
   $router->post('/editzicos', function(){ WIEW::getCtrl("editzicos", true); });
 
 
+  // route lorsque lon demande la page d'edition des commentaires
+  $router->get('/delete', function(){ WIEW::getCtrl("delete", true); });
+
+
   // lance la verification de la route
   $router->run();

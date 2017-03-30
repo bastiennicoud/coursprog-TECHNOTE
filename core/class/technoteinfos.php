@@ -62,7 +62,7 @@
 
             <div class='card-footer'>
               <a href='setedit?id=" . $value->id_technicalnote . "' class='btn btn-primary'>Editer</a>
-              <a href='delete/" . $value->id_technicalnote . "' class='btn btn-danger'>Supprimer</a>
+              <a href='delete?id=" . $value->id_technicalnote . "' class='btn btn-danger'>Supprimer</a>
             </div>
           </div>
         ";
