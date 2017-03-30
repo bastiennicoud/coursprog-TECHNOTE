@@ -211,21 +211,15 @@
 
     }
 
-    /**
-     * Pour supprimer une fiche technique
-     */
-    public function delete(){
-
-      $id = $this->technoteid;
-
-      $data = DB::getDB()->delete("DELETE * FROM TN_comments WHERE idx_technicalnote = ?", [$id]);
-      $data = DB::getDB()->delete("DELETE * FROM TN_contacts WHERE idx_technicalnote = ?", [$id]);
-      $data = DB::getDB()->delete("DELETE * FROM TN_informations WHERE idx_technicalnote = ?", [$id]);
-      $data = DB::getDB()->delete("DELETE * FROM TN_musicians WHERE idx_technicalnote = ?", [$id]);
-      $data = DB::getDB()->delete("DELETE * FROM TN_patchlists WHERE idx_technicalnote = ?", [$id]);
-
-      $data = DB::getDB()->delete("DELETE * FROM TN_technicalnotes WHERE id_technicalnote = ?", [$id]);
-
-    }
+    // /**
+    //  * Pour supprimer une fiche technique
+    //  */
+    // public function delete(){
+    //
+    //   $id = $this->technoteid;
+    //
+    //   $data = DB::getDB()->delete("DELETE * FROM TN_technicalnotes WHERE id_technicalnote = ?", [$id]);
+    //
+    // }
 
   }

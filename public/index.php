@@ -104,7 +104,7 @@
 
 
   // route lorsque lon demande la page d'edition des commentaires
-  $router->get('/delete', function(){ WIEW::getCtrl("delete", true); });
+  //$router->get('/delete', function(){ WIEW::getCtrl("delete", true); });
 
 
   // lance la verification de la route
