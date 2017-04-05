@@ -39,7 +39,7 @@ $(document).ready(function(){
         // affiche les erreurs si il y en a
         if (datas.errors.length == 0) {
           $("#errors").empty();
-          $("#errors").html('<div class="alert alert-success">Mail bien enregistré</div>');
+          $("#errors").html('<div class="alert alert-success">Mail bien envoyé</div>');
         } else {
           $("#errors").empty();
           $("#errors").html('<div class="alert alert-warning">' + $template + '</div>');
