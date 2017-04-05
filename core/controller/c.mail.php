@@ -1,12 +1,43 @@
 <?php
 
-  echo "tutu";
-  // Script pour l'envoi de mail a lutilisateur
+  // envoi du mail php
 
-  $header = "From: \"noreply\"<noreply@mediamatique.ch>\n";
-  $header.= "Reply-to: \"noreply\" <noreply@mediamatique.ch>\n";
-  $header.= "MIME-Version: 1.0";
+  // trate la création d'une fiche technique
 
+  // on initialise la class newtechnote -> qui nous peremttra de faire des traitements
+  $newtechnote = new newtechnote($_POST, $session->getUserID());
+
+  // cette fonction vérifie que les champ ont été remplis
+  $newtechnote->verifyContent();
+
+  // methode spécifique pour vérifier que le pin est numérique
+  $newtechnote->verifyPin();
+
+  // si le statut de verification est OK
+  if ($newtechnote->getState()) {
+
+    // ecriture dans la bd
+    $newtechnote->updateInfos($session->getEdit());
+
+    // redirection
+    echo json_encode($newtechnote->state);
+
+  } else {
+
+    // renvoir ajax des erreurs
+    echo json_encode($newtechnote->state);
+
+  }
+
+
+  $to = 'bastien.nicoud@cpnv.ch';
+
+  $subject = 'Fiche technique Pink Floyd';
+
+  $headers = "From: noreply@mediamatique.ch\r\n";
+  $headers .= "Reply-To: noreply@mediamatique.ch\r\n";
+  $headers .= "MIME-Version: 1.0\r\n";
+  $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
   $message = '<!doctype html>
   <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -68,13 +99,13 @@
         <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px;">
           <tr>
             <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
-        <![endif]--><table role="presentation" cellpadding="0" cellspacing="0" style="background:url(img/live.jpg) top center / cover repeat;font-size:0px;width:100%;" border="0" background="img/live.jpg"><tbody><tr><td><div style="margin:0px auto;max-width:600px;"><!--[if mso | IE]>
+        <![endif]--><table role="presentation" cellpadding="0" cellspacing="0" style="background:url(http://bnicoud.eleves.mediamatique.ch/technote/public/img/live.jpg) top center / cover repeat;font-size:0px;width:100%;" border="0" background="http://bnicoud.eleves.mediamatique.ch/technote/public/img/live.jpg"><tbody><tr><td><div style="margin:0px auto;max-width:600px;"><!--[if mso | IE]>
         <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;">
-          <v:fill origin="0.5, 0" position="0.5,0" type="tile" src="img/live.jpg" />
+          <v:fill origin="0.5, 0" position="0.5,0" type="tile" src="http://bnicoud.eleves.mediamatique.ch/technote/public/img/live.jpg" />
           <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
         <![endif]--><table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;" align="center" border="0"><tbody><tr><td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;padding:50px 0px 50px 0px;"><!--[if mso | IE]>
         <table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:600px;">
-        <![endif]--><div class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:10px 25px;" align="center"><table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;" align="center" border="0"><tbody><tr><td style="width:300px;"><img alt="" title="" height="auto" src="img/logo.png" style="border:none;border-radius:0px;display:block;outline:none;text-decoration:none;width:100%;height:auto;" width="300"></td></tr></tbody></table></td></tr><tr><td style="word-break:break-word;font-size:0px;padding:10px 25px;" align="center"><div class="" style="cursor:auto;color:#FFF;font-family:Ubuntu;font-size:24px;line-height:22px;text-align:center;">Partage de fiches techniques en ligne.</div></td></tr></tbody></table></div><!--[if mso | IE]>
+        <![endif]--><div class="mj-column-per-100 outlook-group-fix" style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;"><table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td style="word-break:break-word;font-size:0px;padding:10px 25px;" align="center"><table role="presentation" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;" align="center" border="0"><tbody><tr><td style="width:300px;"><img alt="" title="" height="auto" src="http://bnicoud.eleves.mediamatique.ch/technote/public/img/logomail.png" style="border:none;border-radius:0px;display:block;outline:none;text-decoration:none;width:100%;height:auto;" width="300"></td></tr></tbody></table></td></tr><tr><td style="word-break:break-word;font-size:0px;padding:10px 25px;" align="center"><div class="" style="cursor:auto;color:#FFF;font-family:Ubuntu;font-size:24px;line-height:22px;text-align:center;">Partage de fiches techniques en ligne.</div></td></tr></tbody></table></div><!--[if mso | IE]>
         </td></tr></table>
         <![endif]--></td></tr></tbody></table><!--[if mso | IE]>
           </v:textbox>
@@ -107,7 +138,4 @@
   </body>
   </html>';
 
-  mail('bastien.nicoud@cpnv.ch', 'Fiche technique pink floyd', $message, $header);
-
-
-  echo "tutu";
+  mail($to, $subject, $message, $headers);
