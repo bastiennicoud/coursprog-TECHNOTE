@@ -3,7 +3,7 @@
 Création d'une petite application web dans le cadre de cours de programation 4ème année média
 
 
-## V1.5
+## V1.7
 Stade actuel :
 
 Front: **OK**  
@@ -16,7 +16,7 @@ Upload des images: **OK**
 Modifs infos globales: **OK**
 Edition des fiche tech: **OK**
 Supression fiche tech: **OK**
-Envoi de mail: **TEST**
+Envoi de mail: **OK**
 
 
 #### TECHNOTE
