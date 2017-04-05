@@ -1,0 +1,32 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Ubuntu" href="https://fonts.googleapis.com/css?family=Ubuntu" />
+    <mj-attributes>
+      <mj-all font-family="Ubuntu" align="center"></mj-all>
+      <mj-class name="header" color="#FFF"></mj-class>
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-container>
+      <mj-section padding="50 0 50 0" background-url="img/live.jpg" background-size="cover" full-width="full-width">
+        <mj-column>
+          <mj-image width="300" src="img/logo.png"></mj-image>
+          <mj-text mj-class="header" font-size="24">Partage de fiches techniques en ligne.</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="50 0 70 0">
+        <mj-column>
+          <mj-text font-size="18">Bonjour</mj-text>
+          <mj-text font-size="16">Bastien souhaite vous partager la fiche technique du groupe <strong>Pink Floyd</strong>.</mj-text>
+          <mj-text font-size="16">Suivez ce lien pour y accéder : <a href="/technote?id=1">/technote?id=1</a></mj-text>
+          <mj-text font-size="16">Le code PIN pour y accéder est : <strong>3456</strong></mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="50 0 50 0" background-color="#2c3e50" full-width="full-width">
+        <mj-column>
+          <mj-text mj-class="header">TECHNOTE<br>Une application pour vous pérmetre de parager vos fiches techniques plus facilement.</mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+<mjml>

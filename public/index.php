@@ -102,6 +102,9 @@
   // route lorsque lon soummet les nouveau commentaires
   $router->post('/editzicos', function(){ WIEW::getCtrl("editzicos", true); });
 
+  // route pour envoyer un mail
+  $router->get('/sendmail', function(){ WIEW::getCtrl("mail", true); });
+
 
   // route lorsque lon demande la page d'edition des commentaires
   //$router->get('/delete', function(){ WIEW::getCtrl("delete", true); });

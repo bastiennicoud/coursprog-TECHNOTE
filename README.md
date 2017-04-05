@@ -16,6 +16,7 @@ Upload des images: **OK**
 Modifs infos globales: **OK**
 Edition des fiche tech: **OK**
 Supression fiche tech: **OK**
+Envoi de mail: **TEST**
 
 
 #### TECHNOTE
