@@ -82,7 +82,7 @@
 
       if (empty($this->technote)) {
 
-        $this->technote["technote"] = DB::getDB()->prepare("SELECT name, description, lastedit, pincode FROM TN_technicalnotes WHERE id_technicalnote=?", [$this->technoteid]);
+        $this->technote["technote"] = DB::getDB()->prepare("SELECT name, description, lastedit, pincode, linkhash FROM TN_technicalnotes WHERE id_technicalnote=?", [$this->technoteid]);
         $this->technote["infos"] = DB::getDB()->prepare("SELECT band, descriptio, date, image, stageplan FROM TN_informations WHERE idx_technicalnote=?", [$this->technoteid]);
         $this->technote["contacts"] = DB::getDB()->prepare("SELECT id_contact, name, email, phone, website, function FROM TN_contacts WHERE idx_technicalnote=?", [$this->technoteid]);
         $this->technote["comments"] = DB::getDB()->prepare("SELECT title, head, commentar FROM TN_comments WHERE idx_technicalnote=?", [$this->technoteid]);
@@ -208,6 +208,21 @@
       $this->getTechnote();
 
       return $this->technote["infos"][0]->stageplan;
+
+    }
+
+    /**
+     * renvoie les infos pour générer un header
+     */
+    public function getMail(){
+
+      $this->getTechnote();
+
+      return array(
+        "name" => $this->technote["infos"][0]->band,
+        "pincode" => $this->technote["technote"][0]->pincode,
+        "link" => $this->technote["technote"][0]->linkhash,
+      );
 
     }
 

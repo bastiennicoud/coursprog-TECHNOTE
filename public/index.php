@@ -103,7 +103,10 @@
   $router->post('/editzicos', function(){ WIEW::getCtrl("editzicos", true); });
 
   // route pour envoyer un mail
-  $router->get('/sendmail', function(){ WIEW::getCtrl("mail", true); });
+  $router->get('/mail', function(){ WIEW::getwiew("mail", true, true); });
+
+  // route pour envoyer un mail
+  $router->post('/sendmail', function(){ WIEW::getCtrl("mail", true); });
 
 
   // route lorsque lon demande la page d'edition des commentaires

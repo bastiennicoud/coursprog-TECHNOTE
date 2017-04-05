@@ -53,6 +53,7 @@
               <p class='card-text'>" . $value->description . "</p>
               <p class='card-text'>Code pin <span class='badge badge-default'>" . $value->pincode . "</span></p>
               <p class='card-text'>Lien de partage : <a href='technote" . $value->linkhash . "' class='card-link'>link</a></p>
+              <a href='mail?id=" . $value->id_technicalnote . "' class='btn btn-info'>Envoyer par mail</a>
               <p class='card-text'><small class='text-muted'>Derniere mise a jour " . $value->lastedit . "</small></p>
             </div>
 
